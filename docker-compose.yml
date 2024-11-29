@@ -6,8 +6,7 @@ services:
       dockerfile: Dockerfile
     volumes:
     - .:/app
-    #"react-app"の部分がプロジェクト名になる
-    command: sh -c "cd bottlediver && yarn start" 
+    - /app/bottlediver/node_modules
     ports:
       - 3000:3000
     stdin_open: true #標準入力をコンテナと紐付ける
