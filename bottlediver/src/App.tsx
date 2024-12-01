@@ -8,6 +8,7 @@ import Discography from './components/Discography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Live from './components/Live';
+import Divider from '@mui/material/Divider'
 
 
 function App() {
@@ -31,7 +32,7 @@ function App() {
                 <CssBaseline />
 
                 <div className="App">
-                    <Header/>
+                    <Header />
                     <img src="IMG_1897.PNG" className='headphoto' />
                     <Menu />
                     <Routes>
@@ -39,6 +40,7 @@ function App() {
                         <Route path="/discography" element={<Discography />} />
                         <Route path="/live" element={<Live />} />
                     </Routes>
+                    <Divider variant="middle" sx={{ marginTop: '100px' }} />
                     <Footer />
                 </div>
 
