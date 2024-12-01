@@ -7,7 +7,7 @@ const Footer = () => {
         <Box className='Footer' sx={{marginTop: '100px'}}>
             <Divider variant="middle" />
             <Box fontWeight="fontWeightLight" fontSize="18px" sx={{ paddingTop: '10px' }}>
-                bottle diver
+                <img src="logo.png" style={{height: '28px'}} />
             </Box>
             <Box fontSize="12px" sx={{ paddingBottom: '10px' }}>
                 a Merodic Noise rock band from Kobe

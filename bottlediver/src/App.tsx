@@ -32,7 +32,7 @@ function App() {
 
                 <div className="App">
                     <Header/>
-                    <img src="artist.png" className='headphoto' />
+                    <img src="IMG_1897.PNG" className='headphoto' />
                     <Menu />
                     <Routes>
                         <Route path="/" element={<About />} />

@@ -9,18 +9,18 @@ const About = () => {
     return (
         <div>
             <Box sx={{ width: '80%', marginInline: 'auto' }}>
-                <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '10px 0 10px 0' }}>
+                <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
                     About
                 </Box>
                 <Divider variant="middle" />
             </Box>
-            <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ paddingTop: '10px' }}>
-                bottle diver
+            <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ paddingTop: '40px' }}>
+            <img src="logo.png" style={{height: '48px'}} />
             </Box>
-            <Box sx={{ paddingBottom: '10px' }}>
+            <Box sx={{ paddingBottom: '20px' }}>
                 a Merodic Noise rock band from Kobe
             </Box>
-            <Box fontWeight="fontWeightLight" fontSize="h6.fontSize" sx={{ padding: '10px' }}>
+            <Box fontWeight="fontWeightLight" fontSize="h6.fontSize" sx={{ padding: '20px 0 5px 0' }}>
                 Member
             </Box>
             <Box>

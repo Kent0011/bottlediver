@@ -10,7 +10,7 @@ import Grid from '@mui/material/Grid'
 const Discography = () => {
     return (
         <Box sx={{width: '80%', marginInline: 'auto'}}>
-            <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '10px 0 10px 0' }}>
+            <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
                 Discography
             </Box>
             <Divider variant="middle" />

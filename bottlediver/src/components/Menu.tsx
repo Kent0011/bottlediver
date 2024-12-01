@@ -61,12 +61,20 @@ const Menu = () => {
 
     return (
         <Box sx={{ width: '100%', marginBottom: '10px'}}>
-            <Box className="Menubar" sx={{ borderBottom: 1, borderColor: 'divider' }}>
-                <Tabs className="Menubar" value={value} onChange={handleChange} aria-label="basic tabs example" sx={{marginInline: 'auto'}}>
-                    <Tab icon={<QuestionMarkIcon />} label="about" {...a11yProps(0)} sx={{ width: '25%' }}/>
-                    <Tab icon={<HeadphonesIcon />} label="discography" {...a11yProps(1)} sx={{ width: '25%' }}/>
-                    <Tab icon={<SpeakerIcon />} label="live" {...a11yProps(2)} sx={{ width: '25%' }}/>
-                    <Tab icon={<FeedIcon />} label="news" {...a11yProps(3)} sx={{ width: '25%' }}/>
+            <Box className="Menubar" sx={{ borderBottom: 1, borderColor: 'divider', display: {xs: 'none', sm: 'block'} }}>
+                <Tabs className="Menubar" variant="fullWidth" value={value} onChange={handleChange} aria-label="basic tabs example" sx={{ marginInline: 'auto' }}>
+                    <Tab icon={<QuestionMarkIcon />} label="about" {...a11yProps(0)} sx={{ width: '25%', display: {xs: 'none', sm: 'flex'} }}/>
+                    <Tab icon={<HeadphonesIcon />} label="discography" {...a11yProps(1)} sx={{ width: '25%', display: {xs: 'none', sm: 'flex'} }}/>
+                    <Tab icon={<SpeakerIcon />} label="live" {...a11yProps(2)} sx={{ width: '25%', display: {xs: 'none', sm: 'flex'} }}/>
+                    <Tab icon={<FeedIcon />} label="news" {...a11yProps(3)} sx={{ width: '25%', display: {xs: 'none', sm: 'flex'} }}/>
+                </Tabs>
+            </Box>
+            <Box className="Menubar" sx={{ borderBottom: 1, borderColor: 'divider', display: {xs: 'block', sm: 'none'} }}>
+                <Tabs className="Menubar" variant="fullWidth" value={value} onChange={handleChange} aria-label="basic tabs example" sx={{ marginInline: 'auto' }}>
+                    <Tab icon={<QuestionMarkIcon />}  {...a11yProps(0)} sx={{ width: '25%', paddingBottom: '15px', display: {xs: 'flex', sm: 'none'} }}/>
+                    <Tab icon={<HeadphonesIcon />}  {...a11yProps(1)} sx={{ width: '25%', paddingBottom: '15px', display: {xs: 'flex', sm: 'none'} }}/>
+                    <Tab icon={<SpeakerIcon />}  {...a11yProps(2)} sx={{ width: '25%', paddingBottom: '15px', display: {xs: 'flex', sm: 'none'} }}/>
+                    <Tab icon={<FeedIcon />}  {...a11yProps(3)} sx={{ width: '25%', paddingBottom: '15px', display: {xs: 'flex', sm: 'none'} }}/>
                 </Tabs>
             </Box>
         </Box>
