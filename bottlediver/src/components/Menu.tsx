@@ -46,7 +46,7 @@ const Menu = () => {
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setValue(newValue);
         if (newValue == 0) {
-            navigate('/about');
+            navigate('/');
         };
         if (newValue == 1) {
             navigate('/discography');
@@ -60,7 +60,7 @@ const Menu = () => {
     };
 
     return (
-        <Box sx={{ width: '100%' }}>
+        <Box sx={{ width: '100%', marginBottom: '10px'}}>
             <Box className="Menubar" sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Tabs className="Menubar" value={value} onChange={handleChange} aria-label="basic tabs example" sx={{marginInline: 'auto'}}>
                     <Tab icon={<QuestionMarkIcon />} label="about" {...a11yProps(0)} sx={{ width: '25%' }}/>
