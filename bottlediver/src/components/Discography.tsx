@@ -19,7 +19,7 @@ const Discography = () => {
                     <img src="2nd.jpg" style={{ width: '100%' }} />
                 </Box>
                 <Box sx={{ marginLeft: '12%', textAlign: 'left', Width: '80%' }}>
-                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: '5px 0 5px 0' }}>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding:  { xs: '5px 20px 5px 0', sm: '5px 30px 5px 0' } }}>
                         2nd Single 『未明』
                     </Box>
                     <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
