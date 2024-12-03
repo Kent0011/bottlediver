@@ -4,38 +4,57 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box'
+import FadeAnimation from './FadeAnimation';
 
 const About = () => {
     return (
         <div>
-            <Box sx={{ width: '80%', marginInline: 'auto' }}>
-                <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
-                    About
-                </Box>
-                <Divider variant="middle" />
+            <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto' }}>
+                <FadeAnimation>
+                    <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
+                        About
+                    </Box>
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider />
+                </FadeAnimation>
             </Box>
-            <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ paddingTop: '40px' }}>
-            <img src="logo.png" style={{height: '48px'}} />
-            </Box>
-            <Box sx={{ paddingBottom: '20px' }}>
-                a Merodic Noise rock band from Kobe
-            </Box>
-            <Box fontWeight="fontWeightLight" fontSize="h6.fontSize" sx={{ padding: '20px 0 5px 0' }}>
-                Member
-            </Box>
-            <Box>
-                <Box sx={{ padding: '5px' }}>
-                    Vo.Gt. 伊藤弓月
+            <FadeAnimation>
+                <Box fontWeight="fontWeightLight" sx={{ paddingTop: '40px' }}>
+                    <img src="logo.png" style={{ height: '48px' }} />
                 </Box>
-                <Box sx={{ padding: '5px' }}>
-                    Gt. 山本健登
+            </FadeAnimation>
+            <FadeAnimation>
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, paddingBottom: '20px' }}>
+                    a Merodic Noise rock band from Kobe
                 </Box>
-                <Box sx={{ padding: '5px' }}>
-                    Ba. 橋本崇志
+            </FadeAnimation>
+            <FadeAnimation>
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: '20px 0 5px 0' }}>
+                    Member
                 </Box>
-                <Box sx={{ padding: '5px' }}>
-                    Dr. 久保仁
-                </Box>
+            </FadeAnimation>
+            <Box sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
+                <FadeAnimation>
+                    <Box sx={{ padding: '3px' }}>
+                        Vo.Gt. 伊藤弓月
+                    </Box>
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Box sx={{ padding: '3px' }}>
+                        Gt. 山本健登
+                    </Box>
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Box sx={{ padding: '3px' }}>
+                        Ba. 橋本崇志
+                    </Box>
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Box sx={{ padding: '3px' }}>
+                        Dr. 久保仁
+                    </Box>
+                </FadeAnimation>
             </Box>
         </div>
     )

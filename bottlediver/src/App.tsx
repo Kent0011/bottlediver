@@ -9,6 +9,7 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Live from './components/Live';
 import Divider from '@mui/material/Divider'
+import FadeAnimation from './components/FadeAnimation';
 
 
 function App() {
@@ -32,7 +33,9 @@ function App() {
                 <CssBaseline />
 
                 <div className="App">
-                    <Header />
+                    <FadeAnimation>
+                        <Header />
+                    </FadeAnimation>
                     <img src="IMG_1897.PNG" className='headphoto' />
                     <Menu />
                     <Routes>

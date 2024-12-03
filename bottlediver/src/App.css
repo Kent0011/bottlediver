@@ -55,3 +55,28 @@
 .Menubar {
   justify-content: center;
 }
+
+.fade-element {
+  opacity: 0;
+}
+
+.fade-element.visible {
+  animation-name: FadeIn;
+  animation-duration: 0.7s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  opacity: 0;
+}
+
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

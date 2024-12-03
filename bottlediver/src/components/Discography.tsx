@@ -4,22 +4,28 @@ import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box'
-import Grid from '@mui/material/Grid2'
+import Button from '@mui/material/Button'
+import FadeAnimation from './FadeAnimation';
 
 
 const Discography = () => {
     return (
-        <Box sx={{ width: '80%', marginInline: 'auto' }}>
+        <Box sx={{ width: {xs: '90%', sm:'80%'}, marginInline: 'auto' }}>
+            <FadeAnimation>
             <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
                 Discography
             </Box>
-            <Divider variant="middle" />
-            <Box sx={{ maxWidth: '600px', margin: '10% auto 10% auto', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
+            </FadeAnimation>
+            <FadeAnimation>
+            <Divider />
+            </FadeAnimation>
+            <FadeAnimation>
+            <Box sx={{ maxWidth: '600px', margin: { xs: '10% auto', sm: '5% auto' }, justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
                 <Box sx={{ width: '20%', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
                     <img src="2nd.jpg" style={{ width: '100%' }} />
                 </Box>
                 <Box sx={{ marginLeft: '12%', textAlign: 'left', Width: '80%' }}>
-                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding:  { xs: '5px 20px 5px 0', sm: '5px 30px 5px 0' } }}>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: { xs: '5px 20px 5px 0', sm: '5px 27px 5px 0' } }}>
                         2nd Single 『未明』
                     </Box>
                     <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
@@ -30,8 +36,12 @@ const Discography = () => {
                     </Box>
                 </Box>
             </Box>
+            </FadeAnimation>
+            <FadeAnimation>
             <Divider variant="middle" />
-            <Box sx={{ maxWidth: '600px', margin: '10% auto 10% auto', justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
+            </FadeAnimation>
+            <FadeAnimation>
+            <Box sx={{ maxWidth: '600px', margin: { xs: '10% auto', sm: '5% auto' }, justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
                 <Box sx={{ width: '20%', textAlign: 'center', display: 'flex', alignItems: 'center' }}>
                     <img src="1st.jpg" style={{ width: '100%' }} />
                 </Box>
@@ -47,6 +57,10 @@ const Discography = () => {
                     </Box>
                 </Box>
             </Box>
+            </FadeAnimation>
+            <FadeAnimation>
+            <Divider variant="middle" />
+            </FadeAnimation>
         </Box>
     )
 }
