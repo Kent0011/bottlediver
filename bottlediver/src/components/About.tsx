@@ -35,11 +35,11 @@ const About = () => {
                 </Box>
             </FadeAnimation>
             <FadeAnimation>
-            <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
-                2023年 結成<br/>
-                2023年8月 1st Single 『ordinary』リリース<br/>
-                2024年5月 2nd Single 『未明』リリース<br/>
-            </Box>
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
+                    2023年 結成<br />
+                    2023年8月 1st Single 『ordinary』リリース<br />
+                    2024年5月 2nd Single 『未明』リリース<br />
+                </Box>
             </FadeAnimation>
             <FadeAnimation>
                 <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: '20px 0 5px 0' }}>
@@ -67,23 +67,25 @@ const About = () => {
                         Dr. 久保仁
                     </Box>
                 </FadeAnimation>
-                <li className='icons2'>
-                <IconButton onClick={() => {window.open('https://www.youtube.com/@bottlediver-kobe')}} sx={{ color: 'white', aspectRatio: 1, width: {xs: '30px', sm: '15%'}}}>
-                    <FaYoutube style={{ aspectRatio: 1, width: '100%' }} />
-                </IconButton>
-                <IconButton onClick={() => {window.open('https://x.com/bottle_diver')}} sx={{ color: 'white', aspectRatio: 1, width: {xs: '30px', sm: '15%'}}}>
-                    <FaXTwitter style={{ aspectRatio: 1, width: '100%' }} />
-                </IconButton>
-                <IconButton onClick={() => {window.open('https://www.instagram.com/bottle_diver/')}} sx={{ color: 'white', aspectRatio: 1, width: {xs: '30px', sm: '15%'}}}>
-                    <FaInstagram style={{ aspectRatio: 1, width: '100%' }} />
-                </IconButton>
-                <IconButton onClick={() => {window.open('https://music.apple.com/jp/artist/bottle-diver/1703550752')}} sx={{ color: 'white', aspectRatio: 1, width: {xs: '30px', sm: '15%'}}}>
-                    <SiApplemusic style={{ aspectRatio: 1, width: '100%' }} />
-                </IconButton>
-                <IconButton onClick={() => {window.open('https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE')}} sx={{ color: 'white', aspectRatio: 1, width: {xs: '30px', sm: '15%'}}}>
-                    <FaSpotify style={{ aspectRatio: 1, width: '100%' }} />
-                </IconButton>                
-            </li>
+                <FadeAnimation>
+                    <li className='icons2'>
+                        <IconButton onClick={() => { window.open('https://www.youtube.com/@bottlediver-kobe') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '30px', sm: '15%' } }}>
+                            <FaYoutube style={{ aspectRatio: 1, width: '100%' }} />
+                        </IconButton>
+                        <IconButton onClick={() => { window.open('https://x.com/bottle_diver') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '30px', sm: '15%' } }}>
+                            <FaXTwitter style={{ aspectRatio: 1, width: '100%' }} />
+                        </IconButton>
+                        <IconButton onClick={() => { window.open('https://www.instagram.com/bottle_diver/') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '30px', sm: '15%' } }}>
+                            <FaInstagram style={{ aspectRatio: 1, width: '100%' }} />
+                        </IconButton>
+                        <IconButton onClick={() => { window.open('https://music.apple.com/jp/artist/bottle-diver/1703550752') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '30px', sm: '15%' } }}>
+                            <SiApplemusic style={{ aspectRatio: 1, width: '100%' }} />
+                        </IconButton>
+                        <IconButton onClick={() => { window.open('https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '30px', sm: '15%' } }}>
+                            <FaSpotify style={{ aspectRatio: 1, width: '100%' }} />
+                        </IconButton>
+                    </li>
+                </FadeAnimation>
             </Box>
         </div>
     )
