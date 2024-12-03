@@ -35,7 +35,7 @@ const LiveContent = (props: { title: string, with: string, modalTitle: string, t
 
     return (
         <Box>
-            <Box onClick={handleOpen} sx={{ maxWidth: '800px', margin: { xs: '2% auto', md: '2% auto' }, justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
+            <Box className='H1' onClick={handleOpen} sx={{ maxWidth: '800px', margin: { xs: '2% auto', md: '2% auto' }, justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
                 <Box sx={{ margin: '0 7%', textAlign: 'left' }}>
                     <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', md: '16px' }, padding: '5px 0 2px 0' }}>
                         {props.title}

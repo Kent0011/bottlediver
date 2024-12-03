@@ -33,7 +33,7 @@ const Live = () => {
                         with='出演多数'
                         modalTitle='メリケンミュージックナイツ〜2024冬〜 @メリケンパーク'
                         ticket='Free'
-                        time="Start : 11:00"
+                        time="START 11:00 / 16:00終了予定"
                         link='https://x.com/bottle_diver/status/1854796338141290659' />
                 </FadeAnimation>
                 <FadeAnimation>
@@ -45,7 +45,7 @@ const Live = () => {
                         with='AIRTONIC / shoka / Hyuga'
                         modalTitle='AIRTONIC 1st mini album 記念すべき火種  release tour @寺田町fireloop'
                         ticket='¥2400 + 1D'
-                        time="Open : 18:30, Start : 19:00"
+                        time="OPEN 18:30 / START 19:00"
                         link='https://x.com/bottle_diver/status/1859554173936636347' />
                 </FadeAnimation>
                 <FadeAnimation>

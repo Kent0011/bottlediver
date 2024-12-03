@@ -12,7 +12,7 @@ const About = () => {
             <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto' }}>
                 <FadeAnimation>
                     <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
-                        About
+                        Biography
                     </Box>
                 </FadeAnimation>
                 <FadeAnimation>
@@ -30,11 +30,18 @@ const About = () => {
                 </Box>
             </FadeAnimation>
             <FadeAnimation>
+            <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
+                2023年 結成<br/>
+                2023年8月 1st Single 『ordinary』リリース<br/>
+                2024年5月 2nd Single 『未明』リリース<br/>
+            </Box>
+            </FadeAnimation>
+            <FadeAnimation>
                 <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: '20px 0 5px 0' }}>
                     Member
                 </Box>
             </FadeAnimation>
-            <Box sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
+            <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
                 <FadeAnimation>
                     <Box sx={{ padding: '3px' }}>
                         Vo.Gt. 伊藤弓月
