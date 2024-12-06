@@ -12,7 +12,10 @@ const Footer = () => {
                 © 2024 bottle diver
             </Box>
             <Box fontSize="12px" sx={{ paddingBottom: '3px' }}>
-                Powered by  <FaReact style={{ margin: '0 -1px -1px 3px' }} /> React  <SiMui style={{ margin: '0 0 -1px 3px' }} /> MUI and  <IoLogoVercel style={{ margin: '0 -2px -1px 3px' }} /> Vercel
+                Powered by  <FaReact style={{ margin: '0 -1px -1px 3px' }} /> React  <SiMui style={{ margin: '0 0 -1px 3px' }} /> MUI and  <IoLogoVercel style={{ margin: '0 -2px -1px 2px' }} /> Vercel
+            </Box>
+            <Box fontSize="12px" sx={{ paddingBottom: '3px' }}>
+                source : <a href='https://github.com/Kent0011/bottlediver' style={{color:"#ffffff99"}}> GitHub </a>
             </Box>
         </Box>
     )
