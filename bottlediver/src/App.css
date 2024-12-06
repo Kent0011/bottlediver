@@ -35,7 +35,7 @@
   width: 40%;
   justify-content: space-around;
   display: flex;
-  margin: 5% auto 0 auto;
+  margin: 20px auto 0 auto;
 }
 
 .App-link {
@@ -103,4 +103,11 @@
 
 .H1:hover {
 	transform: translateY(-3px);
+}
+
+iframe {
+  align-items: center;
+  margin: 5px auto 0 auto; 
+  width: 100%;
+  aspect-ratio: 1.78;
 }

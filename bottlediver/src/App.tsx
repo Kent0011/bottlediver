@@ -10,6 +10,7 @@ import CssBaseline from '@mui/material/CssBaseline';
 import Live from './components/Live';
 import Divider from '@mui/material/Divider'
 import FadeAnimation from './components/FadeAnimation';
+import Videos from './components/Videos';
 
 
 function App() {
@@ -42,6 +43,7 @@ function App() {
                         <Route path="/" element={<About />} />
                         <Route path="/discography" element={<Discography />} />
                         <Route path="/live" element={<Live />} />
+                        <Route path="/videos" element={<Videos />}/>
                     </Routes>
                     <Divider variant="middle" sx={{ marginTop: '100px' }} />
                     <Footer />

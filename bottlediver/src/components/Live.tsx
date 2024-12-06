@@ -41,10 +41,10 @@ const Live = () => {
                 </FadeAnimation>
                 <FadeAnimation>
                     <LiveContent
-                        title='2024.12.20 (Fri) @寺田町fireloop - AIRTONIC 1st mini album 記念すべき火種  release tour'
+                        title='2024.12.20 (Fri) @寺田町Fireloop - AIRTONIC 1st mini album 記念すべき火種  release tour'
                         with='AIRTONIC / shoka / Hyuga'
                         modalTitle='AIRTONIC 1st mini album 記念すべき火種  release tour @寺田町fireloop'
-                        ticket='¥2400 + 1D'
+                        ticket='¥2400 (+1D)'
                         time="OPEN 18:30 / START 19:00"
                         link='https://x.com/bottle_diver/status/1859554173936636347' />
                 </FadeAnimation>
@@ -59,6 +59,18 @@ const Live = () => {
                         ticket='ADV. ¥2,400- / DOOR. ¥2,900- / 学割. ¥1,900-（+1D)'
                         time="OPEN 16:30 / START 17:00"
                         link='https://x.com/yashago_845/status/1853029523039850963' />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <LiveContent
+                        title='2025.12.29 (Sun) @寺田町Fireloop - Fireloop presents 「New order」'
+                        with="リフの惑星 / LOVIN' THE BUNK / いろかにほへと"
+                        modalTitle='Fireloop presents 「New order」 @寺田町Fireloop'
+                        ticket='¥2,400 (+1D)'
+                        time="OPEN 18:15 / START 18:45"
+                        link='https://x.com/bottle_diver/status/1864998750843998455' />
                 </FadeAnimation>
                 <FadeAnimation>
                     <Divider variant="middle" />

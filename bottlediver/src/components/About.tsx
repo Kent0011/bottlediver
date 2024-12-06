@@ -86,6 +86,12 @@ const About = () => {
                         </IconButton>
                     </li>
                 </FadeAnimation>
+                <FadeAnimation>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
+                        access : bottle_diver@gmail.com
+                    </Box>
+                </FadeAnimation>
+
             </Box>
         </div>
     )
