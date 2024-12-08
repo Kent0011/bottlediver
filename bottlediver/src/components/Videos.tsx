@@ -46,6 +46,12 @@ const Videos = () => {
                 <FadeAnimation>
                     <Divider variant="middle" />
                 </FadeAnimation>
+                <FadeAnimation>
+                    <VideosContent title='[Live video] 一閃 - bottle diver' src="https://www.youtube.com/embed/6QEm47ajExU" />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
             </Box>
         </Box>
     )

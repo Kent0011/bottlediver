@@ -60,10 +60,11 @@ const LiveContent = (props: { title: string, with: string, modalTitle: string, t
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{fontSize: { xs: '12px', md: '20px' }}}>
+                        <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: { xs: '12px', md: '20px' } }}>
                             {props.modalTitle}
                         </Typography>
                         <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, fontSize: { xs: '11px', md: '15px' }, lineHeight: 2, width: '100%' }}>
+                            With - {props.with}<br />
                             Ticket - {props.ticket}<br />
                             Time table - {props.time}
                         </Typography>
