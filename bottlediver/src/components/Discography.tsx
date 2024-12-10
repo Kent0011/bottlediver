@@ -45,9 +45,9 @@ const Discography = () => {
             <FadeAnimation>
                 <Box sx={{ maxWidth: '600px', margin: { xs: '10% auto', sm: '5% auto' }, justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
                     <Box sx={{ width: '20%', textAlign: 'center', display: 'flex', alignItems: 'center' }}>
-                        <img className='H' onClick={() => { window.open('https://lnkfi.re/6kEKKLlG') }} src="1st.jpg" style={{ width: '100%', cursor: 'pointer' }} />
+                        <img className='H' onClick={() => { window.open('https://lnkfi.re/bottlediver_ordinary') }} src="1st.jpg" style={{ width: '100%', cursor: 'pointer' }} />
                     </Box>
-                    <Box className='H1' onClick={() => { window.open('https://lnkfi.re/6kEKKLlG') }} sx={{ marginLeft: '12%', textAlign: 'left', Width: '80%' }}>
+                    <Box className='H1' onClick={() => { window.open('https://lnkfi.re/bottlediver_ordinary') }} sx={{ marginLeft: '12%', textAlign: 'left', Width: '80%' }}>
                         <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: '5px 0 5px 0', cursor: 'pointer' }}>
                             1st Single 『ordinary』
                         </Box>
