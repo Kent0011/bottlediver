@@ -94,7 +94,7 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
                         <img src={props.jacketpass} style={{ width: '200px', justifyContent: 'center', margin: '5%' }} />
-                        <Box sx={{ alignItems: 'center', margin: '5%' }}>
+                        <Box sx={{ alignItems: 'center', margin: '5% auto' }}>
                             <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: '20px', margin: '8% 0 0 0' }}>
                                 {props.title}
                             </Typography>
