@@ -44,8 +44,8 @@ const Live = () => {
             </FadeAnimation>
             <FadeAnimation>
                 <Box sx={{ display: 'flex', width: {xs: '90%', sm:'70%'}, justifyContent: 'space-around', margin: '0 auto' }}>
-                    <Button href="https://docs.google.com/forms/d/e/1FAIpQLSfeHoMQok0EVnG7Q-TaPyHf6Q_UIypQ4EIS538oW-J7fCPUdw/viewform?usp=sf_link" sx={{ margin: '0 0 15px 0', fontSize: '18px' }}>TICKET</Button>
-                    <Button onClick={handleOpen} sx={{ margin: '0 0 15px 0', fontSize: '18px' }}>GOODS</Button>
+                    <Button href="https://docs.google.com/forms/d/e/1FAIpQLSfeHoMQok0EVnG7Q-TaPyHf6Q_UIypQ4EIS538oW-J7fCPUdw/viewform?usp=sf_link" sx={{ margin: '0 0 15px 0', fontSize: {xs: '15px', sm:'18px'} }}>TICKET</Button>
+                    <Button onClick={handleOpen} sx={{ margin: '0 0 15px 0', fontSize: {xs: '15px', sm:'18px'} }}>GOODS</Button>
                 </Box>
             </FadeAnimation>
             <FadeAnimation>
