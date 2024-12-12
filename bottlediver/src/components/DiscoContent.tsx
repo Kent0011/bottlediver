@@ -102,19 +102,19 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
                                 {modalmusic()}
                             </Typography>
                             <li className='icons2'>
-                                <IconButton onClick={() => { window.open(props.applelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
+                                <IconButton className='H2' onClick={() => { window.open(props.applelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
                                     <SiApplemusic style={{ aspectRatio: 1, width: '100%' }} />
                                 </IconButton>
-                                <IconButton onClick={() => { window.open(props.spotifylink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
+                                <IconButton className='H2' onClick={() => { window.open(props.spotifylink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
                                     <FaSpotify style={{ aspectRatio: 1, width: '100%' }} />
                                 </IconButton>
-                                <IconButton onClick={() => { window.open(props.youtubelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
+                                <IconButton className='H2' onClick={() => { window.open(props.youtubelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
                                     <SiYoutubemusic style={{ aspectRatio: 1, width: '100%' }} />
                                 </IconButton>
-                                <IconButton onClick={() => { window.open(props.linelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
+                                <IconButton className='H2' onClick={() => { window.open(props.linelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
                                     <img src='LINE_MUSIC_secondary_logo_black.png' style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
                                 </IconButton>
-                                <IconButton onClick={() => { window.open(props.amazonlink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
+                                <IconButton className='H2' onClick={() => { window.open(props.amazonlink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
                                     <SiAmazonmusic style={{ aspectRatio: 1, width: '100%', marginTop: '3px' }} />
                                 </IconButton>
                             </li>
