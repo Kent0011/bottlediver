@@ -54,18 +54,6 @@ const Live = () => {
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
                     <LiveContent
-                        title='2024.12.20 (Fri) @寺田町Fireloop - AIRTONIC 1st mini album 記念すべき火種  release tour'
-                        with='AIRTONIC / shoka / Hyuga'
-                        modalTitle='AIRTONIC 1st mini album 記念すべき火種  release tour @寺田町Fireloop'
-                        ticket='¥2400 (+1D)'
-                        time="OPEN 18:30 / START 19:00"
-                        link='https://x.com/bottle_diver/status/1859554173936636347' />
-                </FadeAnimation>
-                <FadeAnimation>
-                    <Divider variant="middle" />
-                </FadeAnimation>
-                <FadeAnimation>
-                    <LiveContent
                         title='2024.12.29 (Sun) @神戸KINGSX - 夜叉子presents『半神半鬼』'
                         with='夜叉子 / komusume / TOM-ATOM / TURBO LIGHTER / ナイトサファリ'
                         modalTitle='夜叉子presents『半神半鬼』 @神戸KINGSX'
