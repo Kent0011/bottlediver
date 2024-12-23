@@ -37,7 +37,7 @@ function App() {
                     <FadeAnimation>
                         <Header />
                     </FadeAnimation>
-                    <img src="IMG_1897.PNG" className='headphoto' />
+                    <img src="main.png" className='headphoto' />
                     <Menu />
                     <Routes>
                         <Route path="/" element={<About />} />
