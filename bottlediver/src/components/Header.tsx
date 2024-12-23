@@ -11,7 +11,7 @@ export const Header = () => {
 
     return (
         <div className='Header'>
-            <img src="logo.png" style={{width: '40%', padding: '0 10px 0 10px'}}/>
+            <img src="logo.png" style={{width: '40%', padding: '0 5px 0 5px'}}/>
             <li className='icons'>
                 <IconButton onClick={() => {window.open('https://www.youtube.com/@bottlediver-kobe')}} sx={{ color: 'white', aspectRatio: 1, width: {xs: '30px', sm: '15%'}}}>
                     <FaYoutube style={{ aspectRatio: 1, width: '100%' }} />
