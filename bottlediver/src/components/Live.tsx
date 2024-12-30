@@ -54,18 +54,6 @@ const Live = () => {
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
                     <LiveContent
-                        title='2024.12.29 (Sun) @神戸KINGSX - 夜叉子presents『半神半鬼』'
-                        with='夜叉子 / komusume / TOM-ATOM / TURBO LIGHTER / ナイトサファリ'
-                        modalTitle='夜叉子presents『半神半鬼』 @神戸KINGSX'
-                        ticket='ADV. ¥2,400- / DOOR. ¥2,900- / 学割. ¥1,900-（+1D)'
-                        time="OPEN 16:30 / START 17:00"
-                        link='https://x.com/yashago_845/status/1853029523039850963' />
-                </FadeAnimation>
-                <FadeAnimation>
-                    <Divider variant="middle" />
-                </FadeAnimation>
-                <FadeAnimation>
-                    <LiveContent
                         title='2025.1.17 (Fri) @寺田町Fireloop - Fireloop presents 「New order」'
                         with="リフの惑星 / LOVIN' THE BUNK / いろかにほへと"
                         modalTitle='Fireloop presents 「New order」 @寺田町Fireloop'
