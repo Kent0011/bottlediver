@@ -82,9 +82,9 @@ const About = () => {
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, maxWidth: '800px', margin: '0 auto' }}>
                     <FadeAnimation>
                         <NewsContent
-                            title='2025.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
+                            title='2024.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
                             content="夜叉子 1st Anniversary & EP release party 『半神半鬼』 ご来場頂いた皆様、ありがとうございました！"
-                            modalTitle='2025.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
+                            modalTitle='2024.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
                             imgpass='news1.jpg'
                             link='https://x.com/bottle_diver/status/1864998750843998455' />
                     </FadeAnimation>
@@ -95,9 +95,9 @@ const About = () => {
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, maxWidth: '800px', margin: '0 auto' }}>
                     <FadeAnimation>
                         <NewsContent
-                            title='2025.12.19 - bottle diver 公式サイト open!'
+                            title='2024.12.19 - bottle diver 公式サイト open!'
                             content="bottlediverの公式ウェブサイトがオープンしました! 今後のライブ情報やリリース情報などを随時更新していきますので、お楽しみに!"
-                            modalTitle='2025.12.19 - bottle diver 公式サイト open!'
+                            modalTitle='2024.12.19 - bottle diver 公式サイト open!'
                             imgpass='main.png'
                             link='https://x.com/bottle_diver/status/1864998750843998455' />
                     </FadeAnimation>
@@ -105,43 +105,6 @@ const About = () => {
                         <Divider variant="middle" />
                     </FadeAnimation>
                 </Box>
-                <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
-                    <FadeAnimation>
-                        <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
-                            Subscriptions
-                        </Box>
-                    </FadeAnimation>
-                    <FadeAnimation>
-                        <Divider />
-                    </FadeAnimation>
-                </Box>
-                <FadeAnimation>
-                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: '30px 0 5px 0', lineHeight: '2' }}>
-                        各種配信サイトにて楽曲配信中!<br />
-                        アーティストページはこちら
-                    </Box>
-                </FadeAnimation>
-                <FadeAnimation>
-                    <Box sx={{ width: { xs: '60%', sm: '40%' }, marginInline: 'auto' }}>
-                        <li className='icons2' style={{ marginInline: 'auto' }}>
-                            <IconButton className='H2' onClick={() => { window.open("https://music.apple.com/jp/artist/bottle-diver/1703550752") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <SiApplemusic style={{ aspectRatio: 1, width: '100%' }} />
-                            </IconButton>
-                            <IconButton className='H2' onClick={() => { window.open("https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <FaSpotify style={{ aspectRatio: 1, width: '100%' }} />
-                            </IconButton>
-                            <IconButton className='H2' onClick={() => { window.open("https://music.youtube.com/channel/UCcMl6Fpk77ByOXUXUJSe_gg") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <SiYoutubemusic style={{ aspectRatio: 1, width: '100%' }} />
-                            </IconButton>
-                            <IconButton className='H2' onClick={() => { window.open("https://music.line.me/webapp/artist/mi000000001efa2902") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <img src='LINE_MUSIC_secondary_logo_white.png' style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
-                            </IconButton>
-                            <IconButton className='H2' onClick={() => { window.open("https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <SiAmazonmusic style={{ aspectRatio: 1, width: '100%', marginTop: '3px' }} />
-                            </IconButton>
-                        </li>
-                    </Box>
-                </FadeAnimation>
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
                     <FadeAnimation>
                         <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
