@@ -10,6 +10,7 @@ import { useNavigate } from "react-router-dom";
 import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiApplemusic } from "react-icons/si";
+import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
 
 const About = () => {
     return (
@@ -67,8 +68,60 @@ const About = () => {
                         Dr. 久保仁
                     </Box>
                 </FadeAnimation>
+                <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
+                    <FadeAnimation>
+                        <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
+                            Subscriptions
+                        </Box>
+                    </FadeAnimation>
+                    <FadeAnimation>
+                        <Divider />
+                    </FadeAnimation>
+                </Box>
                 <FadeAnimation>
-                    <Box sx={{width: {xs: '60%', sm:'40%'}, marginInline: 'auto'}}>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: '30px 0 5px 0', lineHeight: '2' }}>
+                        各種配信サイトにて楽曲配信中!<br />
+                        アーティストページはこちら
+                    </Box>
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Box sx={{ width: { xs: '60%', sm: '40%' }, marginInline: 'auto' }}>
+                        <li className='icons2' style={{ marginInline: 'auto' }}>
+                            <IconButton className='H2' onClick={() => { window.open("https://music.apple.com/jp/artist/bottle-diver/1703550752") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                                <SiApplemusic style={{ aspectRatio: 1, width: '100%' }} />
+                            </IconButton>
+                            <IconButton className='H2' onClick={() => { window.open("https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                                <FaSpotify style={{ aspectRatio: 1, width: '100%' }} />
+                            </IconButton>
+                            <IconButton className='H2' onClick={() => { window.open("https://music.youtube.com/channel/UCcMl6Fpk77ByOXUXUJSe_gg") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                                <SiYoutubemusic style={{ aspectRatio: 1, width: '100%' }} />
+                            </IconButton>
+                            <IconButton className='H2' onClick={() => { window.open("https://music.line.me/webapp/artist/mi000000001efa2902") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                                <img src='LINE_MUSIC_secondary_logo_white.png' style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
+                            </IconButton>
+                            <IconButton className='H2' onClick={() => { window.open("https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                                <SiAmazonmusic style={{ aspectRatio: 1, width: '100%', marginTop: '3px' }} />
+                            </IconButton>
+                        </li>
+                    </Box>
+                </FadeAnimation>
+                <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
+                    <FadeAnimation>
+                        <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
+                            SNS
+                        </Box>
+                    </FadeAnimation>
+                    <FadeAnimation>
+                        <Divider />
+                    </FadeAnimation>
+                </Box>
+                <FadeAnimation>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: '30px 0 5px 0', lineHeight: '2' }}>
+                        各種SNS随時更新中!
+                    </Box>
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Box sx={{ width: { xs: '60%', sm: '40%' }, marginInline: 'auto' }}>
                         <li className='icons2' style={{ marginInline: 'auto' }}>
                             <IconButton onClick={() => { window.open('https://www.youtube.com/@bottlediver-kobe') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
                                 <FaYoutube style={{ aspectRatio: 1, width: '100%' }} />
@@ -79,20 +132,30 @@ const About = () => {
                             <IconButton onClick={() => { window.open('https://www.instagram.com/bottle_diver/') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
                                 <FaInstagram style={{ aspectRatio: 1, width: '100%' }} />
                             </IconButton>
-                            <IconButton onClick={() => { window.open('https://music.apple.com/jp/artist/bottle-diver/1703550752') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <SiApplemusic style={{ aspectRatio: 1, width: '100%' }} />
-                            </IconButton>
-                            <IconButton onClick={() => { window.open('https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <FaSpotify style={{ aspectRatio: 1, width: '100%' }} />
-                            </IconButton>
                         </li>
                     </Box>
                 </FadeAnimation>
+                <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
+                    <FadeAnimation>
+                        <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
+                            Contact
+                        </Box>
+                    </FadeAnimation>
+                    <FadeAnimation>
+                        <Divider />
+                    </FadeAnimation>
+                </Box>
                 <FadeAnimation>
-                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
-                        access : bottlediver.kobe@gmail.com
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: '30px 0 5px 0', lineHeight: '2' }}>
+                        出演依頼等コンタクトは下記メールアドレスまたはDMにて受け付けております
                     </Box>
                 </FadeAnimation>
+                <FadeAnimation>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: '0 0 5px 0', lineHeight: '2' }}>
+                        e-mail : bottlediver.kobe@gmail.com
+                    </Box>
+                </FadeAnimation>
+
 
             </Box>
         </div>

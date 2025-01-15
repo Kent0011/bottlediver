@@ -35,12 +35,12 @@ const LiveContent = (props: { title: string, with: string, modalTitle: string, t
 
     return (
         <Box>
-            <Box className='H1' onClick={handleOpen} sx={{ maxWidth: '800px', margin: { xs: '2% auto', md: '2% auto' }, justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
+            <Box className='H1' onClick={handleOpen} sx={{ maxWidth: '800px', margin: { xs: '2% auto', sm: '2% auto' }, justifyContent: 'center', alignItems: 'center', cursor: 'pointer' }}>
                 <Box sx={{ margin: '0 7%', textAlign: 'left' }}>
-                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', md: '16px' }, padding: '5px 0 2px 0' }}>
+                    <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '16px' }, padding: '5px 0 2px 0' }}>
                         {props.title}
                     </Box>
-                    <Box fontWeight="fontWeightLight" sx={{ display: { xs: 'none', md: 'block' }, fontSize: { md: '15px' }, paddingLeft: '3%' }}>
+                    <Box fontWeight="fontWeightLight" sx={{ display: { xs: 'none', sm: 'block' }, fontSize: { sm: '15px' }, paddingLeft: '3%' }}>
                         - w.  {props.with}
                     </Box>
                 </Box>
@@ -60,10 +60,10 @@ const LiveContent = (props: { title: string, with: string, modalTitle: string, t
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: { xs: '12px', md: '20px' } }}>
+                        <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: { xs: '12px', sm: '20px' } }}>
                             {props.modalTitle}
                         </Typography>
-                        <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, fontSize: { xs: '11px', md: '15px' }, lineHeight: 2, width: '100%' }}>
+                        <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, fontSize: { xs: '11px', sm: '15px' }, lineHeight: 2, width: '100%' }}>
                             With - {props.with}<br />
                             Ticket - {props.ticket}<br />
                             Time table - {props.time}

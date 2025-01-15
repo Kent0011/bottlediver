@@ -66,7 +66,7 @@ const Menu = () => {
         <Box sx={{ width: '100%', marginBottom: '10px' }}>
             <Box className="Menubar" sx={{ borderBottom: 1, borderColor: 'divider', display: { xs: 'none', sm: 'block' } }}>
                 <Tabs className="Menubar" variant="fullWidth" value={value} onChange={handleChange} aria-label="basic tabs example" sx={{ marginInline: 'auto' }}>
-                    <Tab icon={<PersonIcon />} label="Biography" {...a11yProps(0)} sx={{ width: '25%', display: { xs: 'none', sm: 'flex' } }} />
+                    <Tab icon={<PersonIcon />} label="Top" {...a11yProps(0)} sx={{ width: '25%', display: { xs: 'none', sm: 'flex' } }} />
                     <Tab icon={<HeadphonesIcon />} label="discography" {...a11yProps(1)} sx={{ width: '25%', display: { xs: 'none', sm: 'flex' } }} />
                     <Tab icon={<SpeakerIcon />} label="live" {...a11yProps(2)} sx={{ width: '25%', display: { xs: 'none', sm: 'flex' } }} />
                     <Tab icon={<MusicVideoIcon />} label="videos" {...a11yProps(3)} sx={{ width: '25%', display: { xs: 'none', sm: 'flex' } }} />

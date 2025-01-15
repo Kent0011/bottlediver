@@ -6,6 +6,7 @@ import Menu from './components/Menu';
 import Footer from './components/Footer';
 import Discography from './components/Discography';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Live from './components/Live';
 import Divider from '@mui/material/Divider'
@@ -34,16 +35,18 @@ function App() {
                 <CssBaseline />
 
                 <div className="App">
-                    <FadeAnimation>
-                        <Header />
-                    </FadeAnimation>
+                    <Box>
+                        <FadeAnimation>
+                            <Header />
+                        </FadeAnimation>
+                    </Box>
                     <img src="main.png" className='headphoto' />
                     <Menu />
                     <Routes>
                         <Route path="/" element={<About />} />
                         <Route path="/discography" element={<Discography />} />
                         <Route path="/live" element={<Live />} />
-                        <Route path="/videos" element={<Videos />}/>
+                        <Route path="/videos" element={<Videos />} />
                     </Routes>
                     <Divider variant="middle" sx={{ marginTop: '100px' }} />
                     <Footer />
