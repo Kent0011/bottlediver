@@ -65,7 +65,7 @@ const NewsContent = (props: { title: string, modalTitle: string, content: string
                             <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: '20px', margin: '5% 0 8% 0' }}>
                                 {props.modalTitle}
                             </Typography>
-                            <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ fontSize: {xs: '10px', sm: '15px'}, mt: 2, lineHeight: 2, width: '100%', marginInline: 'auto' }}>
+                            <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ fontSize: {xs: '12px', sm: '15px'}, mt: 2, lineHeight: 2, width: '100%', marginInline: 'auto' }}>
                                 {props.content}
                             </Typography>
                         </Box>
