@@ -185,13 +185,13 @@ const About = () => {
                 <FadeAnimation>
                     <Box sx={{ width: { xs: '60%', sm: '40%' }, marginInline: 'auto' }}>
                         <li className='icons2' style={{ marginInline: 'auto' }}>
-                            <IconButton onClick={() => { window.open('https://www.youtube.com/@bottlediver-kobe') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                            <IconButton className='H2' onClick={() => { window.open('https://www.youtube.com/@bottlediver-kobe') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
                                 <FaYoutube style={{ aspectRatio: 1, width: '100%' }} />
                             </IconButton>
-                            <IconButton onClick={() => { window.open('https://x.com/bottle_diver') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                            <IconButton className='H2' onClick={() => { window.open('https://x.com/bottle_diver') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
                                 <FaXTwitter style={{ aspectRatio: 1, width: '100%' }} />
                             </IconButton>
-                            <IconButton onClick={() => { window.open('https://www.instagram.com/bottle_diver/') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
+                            <IconButton className='H2' onClick={() => { window.open('https://www.instagram.com/bottle_diver/') }} sx={{ color: 'white', aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
                                 <FaInstagram style={{ aspectRatio: 1, width: '100%' }} />
                             </IconButton>
                         </li>
@@ -211,7 +211,7 @@ const About = () => {
                 </Box>
                 <FadeAnimation>
                     <Box fontWeight="fontWeightLight" sx={{ maxWidth: { xs: '80%', sm: '70%' }, marginInline: 'auto', fontSize: { xs: '12px', sm: '15px' }, padding: '30px 0 5px 0', lineHeight: '2' }}>
-                        出演依頼等コンタクトは下記メールアドレスまたはDMにて受け付けております
+                        出演依頼等お問い合わせは下記メールアドレスまたはDMにて受け付けております
                     </Box>
                 </FadeAnimation>
                 <FadeAnimation>
@@ -219,8 +219,6 @@ const About = () => {
                         e-mail : bottlediver.kobe@gmail.com
                     </Box>
                 </FadeAnimation>
-
-
             </Box>
         </div>
     )
