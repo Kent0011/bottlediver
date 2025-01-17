@@ -52,18 +52,6 @@ const Live = () => {
                 <Divider />
             </FadeAnimation>
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
-                <FadeAnimation>
-                    <LiveContent
-                        title='2025.1.17 (Fri) @寺田町Fireloop - Fireloop presents 「New order」'
-                        with="リフの惑星 / LOVIN' THE BUNK / いろかにほへと"
-                        modalTitle='Fireloop presents 「New order」 @寺田町Fireloop'
-                        ticket='¥2,400 (+1D)'
-                        time="OPEN 18:15 / START 18:45"
-                        link='https://x.com/bottle_diver/status/1864998750843998455' />
-                </FadeAnimation>
-                <FadeAnimation>
-                    <Divider variant="middle" />
-                </FadeAnimation>
             </Box>
 
             <Modal
