@@ -12,6 +12,7 @@ import { FaXTwitter } from "react-icons/fa6";
 import { SiApplemusic } from "react-icons/si";
 import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
 import NewsContent from './NewsContent';
+import Button from '@mui/material/Button';
 
 const About = () => {
     return (
@@ -69,6 +70,8 @@ const About = () => {
                         Dr. 久保仁
                     </Box>
                 </FadeAnimation>
+
+
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
                     <FadeAnimation>
                         <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
@@ -82,11 +85,29 @@ const About = () => {
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, maxWidth: '800px', margin: '0 auto' }}>
                     <FadeAnimation>
                         <NewsContent
+                            title='2025.01.17 - battle de egg 2025 2次審査 web投票スタート!'
+                            modalTitle='2025.01.17 - battle de egg 2025 2次審査 web投票スタート!'
+                            imgpass='main.png' >
+                            battle de egg 2025 1次審査に通過しました! <br />
+                            2次審査はファンによるweb投票となります! 下記リンクから投票をぜひお願いいたします! <br />
+                            <Box sx={{ display: 'flex', justifyContent: 'space-around', margin: '0 auto' }}>
+                                <Button href={'https://eggs.mu/music/project/battledeegg25_vote'} style={{ textAlign: 'center', margin: '10px 0 -18px 0', width: '100%' }}> 投票はこちらから! </Button>
+                                <Button href={'#'} style={{ textAlign: 'center', margin: '10px 0 -18px 0', width: '100%' }}> learn more </Button>
+                            </Box>
+                        </NewsContent>
+                    </FadeAnimation>
+                    <FadeAnimation>
+                        <Divider variant="middle" />
+                    </FadeAnimation>
+                </Box>
+                <Box sx={{ width: { xs: '90%', sm: '80%' }, maxWidth: '800px', margin: '0 auto' }}>
+                    <FadeAnimation>
+                        <NewsContent
                             title='2024.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
-                            content="夜叉子 1st Anniversary & EP release party 『半神半鬼』 ご来場頂いた皆様、ありがとうございました！"
                             modalTitle='2024.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
-                            imgpass='news1.jpg'
-                            link='https://x.com/bottle_diver/status/1864998750843998455' />
+                            imgpass='news1.jpg' >
+                            夜叉子 1st Anniversary & EP release party 『半神半鬼』 ご来場頂いた皆様、ありがとうございました！
+                        </NewsContent>
                     </FadeAnimation>
                     <FadeAnimation>
                         <Divider variant="middle" />
@@ -96,15 +117,17 @@ const About = () => {
                     <FadeAnimation>
                         <NewsContent
                             title='2024.12.19 - bottle diver 公式サイト open!'
-                            content="bottlediverの公式ウェブサイトがオープンしました! 今後のライブ情報やリリース情報などを随時更新していきますので、お楽しみに!"
                             modalTitle='2024.12.19 - bottle diver 公式サイト open!'
-                            imgpass='main.png'
-                            link='https://x.com/bottle_diver/status/1864998750843998455' />
+                            imgpass='main.png' >
+                            bottlediverの公式ウェブサイトがオープンしました! 今後のライブ情報やリリース情報などを随時更新していきますので、お楽しみに!
+                        </NewsContent>
                     </FadeAnimation>
                     <FadeAnimation>
                         <Divider variant="middle" />
                     </FadeAnimation>
                 </Box>
+
+
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
                     <FadeAnimation>
                         <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
@@ -142,6 +165,8 @@ const About = () => {
                         </li>
                     </Box>
                 </FadeAnimation>
+
+
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
                     <FadeAnimation>
                         <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
@@ -172,6 +197,8 @@ const About = () => {
                         </li>
                     </Box>
                 </FadeAnimation>
+
+
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto', marginTop: '60px' }}>
                     <FadeAnimation>
                         <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>

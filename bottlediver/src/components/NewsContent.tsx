@@ -10,6 +10,7 @@ import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Backdrop from '@mui/material/Backdrop';
+import { ReactNode } from 'react';
 
 const modalstyle = {
     position: 'absolute',
@@ -29,7 +30,7 @@ const modalstyle = {
 };
 
 
-const NewsContent = (props: { title: string, modalTitle: string, content: string, link: string, imgpass: string }) => {
+const NewsContent = (props: { title: string, modalTitle: string, children: ReactNode, imgpass: string }) => {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -66,7 +67,7 @@ const NewsContent = (props: { title: string, modalTitle: string, content: string
                                 {props.modalTitle}
                             </Typography>
                             <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ fontSize: {xs: '12px', sm: '15px'}, mt: 2, lineHeight: 2, width: '100%', marginInline: 'auto' }}>
-                                {props.content}
+                                {props.children}
                             </Typography>
                         </Box>
                     </Box>
