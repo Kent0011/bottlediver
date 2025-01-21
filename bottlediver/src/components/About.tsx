@@ -103,8 +103,8 @@ const About = () => {
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, maxWidth: '800px', margin: '0 auto' }}>
                     <FadeAnimation>
                         <NewsContent
-                            title='2024.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
-                            modalTitle='2024.12.30 - 夜叉子『半神半鬼』 Thank you for coming!'
+                            title='2024.12.30 - 夜叉子『半神半鬼』 Thank you for comming!'
+                            modalTitle='2024.12.30 - 夜叉子『半神半鬼』 Thank you for comming!'
                             imgpass='news1.jpg' >
                             夜叉子 1st Anniversary & EP release party 『半神半鬼』 ご来場頂いた皆様、ありがとうございました！
                         </NewsContent>
