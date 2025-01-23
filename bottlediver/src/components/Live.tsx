@@ -52,6 +52,19 @@ const Live = () => {
                 <Divider />
             </FadeAnimation>
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
+                <FadeAnimation>
+                    <LiveContent 
+                        title="2025.04.24 - ? ? ?"
+                        modalTitle="? ? ?"
+                        with="? ? ?"
+                        time="? ? ?"
+                        ticket="? ? ?"
+                        link="#"
+                    />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
             </Box>
 
             <Modal

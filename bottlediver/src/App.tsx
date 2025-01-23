@@ -36,11 +36,32 @@ function App() {
 
                 <div className="App">
                     <Box>
-                        <FadeAnimation>
-                            <Header />
-                        </FadeAnimation>
+                        <Header />
                     </Box>
-                    <img src="main.png" className='headphoto' />
+                    <Box id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" sx={{ width: '100%', aspectRatio: '16/9' }}>
+                        <Box className="carousel-inner">
+                            <Box className="carousel-item active">
+                                <img src="main.png" className="d-block w-100" alt="..." />
+                            </Box>
+                            <Box className="carousel-item">
+                                <img src="2.jpg" className="d-block w-100" alt="..." />
+                            </Box>
+                            <Box className="carousel-item">
+                                <img src="3.jpg" className="d-block w-100" alt="..." />
+                            </Box>
+                            <Box className="carousel-item">
+                                <img src="4.jpg" className="d-block w-100" alt="..." />
+                            </Box>
+                        </Box>
+                        <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
+                            <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Previous</span>
+                        </button>
+                        <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
+                            <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span className="visually-hidden">Next</span>
+                        </button>
+                    </Box>
                     <Menu />
                     <Routes>
                         <Route path="/" element={<About />} />
