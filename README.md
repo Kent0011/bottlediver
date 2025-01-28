@@ -5,5 +5,7 @@
 `TypeScript`  
 `React`  
 `MUI`  
+## 開発環境
 `DockerDesktop`  
-`Vercel`
+`MacBookPro, M1 (2020)`
+
