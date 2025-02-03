@@ -12,6 +12,7 @@ import Live from './components/Live';
 import Divider from '@mui/material/Divider'
 import FadeAnimation from './components/FadeAnimation';
 import Videos from './components/Videos';
+import { Analytics } from "@vercel/analytics/react"
 
 
 function App() {
@@ -72,7 +73,7 @@ function App() {
                     <Divider variant="middle" sx={{ marginTop: '100px' }} />
                     <Footer />
                 </div>
-
+                <Analytics />
             </ThemeProvider>
         </BrowserRouter>
     );
