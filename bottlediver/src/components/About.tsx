@@ -87,7 +87,7 @@ const About = () => {
                         <NewsContent
                             title='2025.01.17 - battle de egg 2025 2次審査 web投票スタート!'
                             modalTitle='2025.01.17 - battle de egg 2025 2次審査 web投票スタート!'
-                            imgpass='main.png' >
+                            imgpass='main.jpg' >
                             battle de egg 2025 1次審査に通過しました! <br />
                             2次審査はファンによるweb投票となります! 下記リンクから投票をぜひお願いいたします! <br />
                             <Box sx={{ display: 'flex', justifyContent: 'space-around', margin: '0 auto' }}>
@@ -118,7 +118,7 @@ const About = () => {
                         <NewsContent
                             title='2024.12.19 - bottle diver 公式サイト open!'
                             modalTitle='2024.12.19 - bottle diver 公式サイト open!'
-                            imgpass='main.png' >
+                            imgpass='main.jpg' >
                             bottlediverの公式ウェブサイトがオープンしました! 今後のライブ情報やリリース情報などを随時更新していきますので、お楽しみに!
                         </NewsContent>
                     </FadeAnimation>

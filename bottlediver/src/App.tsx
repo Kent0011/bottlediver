@@ -42,7 +42,7 @@ function App() {
                     <Box id="carouselExampleAutoplaying" className="carousel slide carousel-fade" data-bs-ride="carousel" sx={{ width: '100%', aspectRatio: '16/9' }}>
                         <Box className="carousel-inner">
                             <Box className="carousel-item active">
-                                <img src="main.png" className="d-block w-100" alt="..." />
+                                <img src="main.jpg" className="d-block w-100" alt="..." />
                             </Box>
                             <Box className="carousel-item">
                                 <img src="2.jpg" className="d-block w-100" alt="..." />
