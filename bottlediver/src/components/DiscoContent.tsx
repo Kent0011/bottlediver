@@ -44,8 +44,8 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
         const items = []
         for (let i = 0; i < props.Mnum; i++) {
             items.push (
-                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
-                    - M{i + 1}. {props.M[i]}
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: { xs: '0 0 0 10px', sm: '0 0 0 10px' } }}>
+                    M{i + 1}. {props.M[i]}
                 </Box>
             )
         };
@@ -56,12 +56,12 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
         const items = []
         for (let i = 0; i < props.Mnum; i++) {
             items.push (
-                <Box fontWeight="fontWeightLight" sx={{ fontSize: '15px' }}>
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: '15px', textAlign: 'left' }}>
                     M{i + 1}. {props.M[i]}
                 </Box>
             )
         };
-        return(<Box>{items}</Box>);
+        return(<Box sx={{ width: 'fit-content' }}>{items}</Box>);
     };
 
     return (
@@ -93,12 +93,12 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <img src={props.jacketpass} style={{ width: '200px', justifyContent: 'center', margin: '5%' }} />
+                        <img src={props.jacketpass} style={{ width: '200px', justifyContent: 'center', margin: 'auto 5%', aspectRatio: "1" }} />
                         <Box sx={{ alignItems: 'center', margin: '5% auto' }}>
                             <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: '20px', margin: '8% 0 0 0' }}>
                                 {props.title}
                             </Typography>
-                            <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, lineHeight: 2, width: '100%' }}>
+                            <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, lineHeight: 2, width: 'fit-content', margin: '10px auto 0 auto' }}>
                                 {modalmusic()}
                             </Typography>
                             <li className='icons2'>

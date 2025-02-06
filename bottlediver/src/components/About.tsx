@@ -91,8 +91,7 @@ const About = () => {
                             battle de egg 2025 1次審査に通過しました! <br />
                             2次審査はファンによるweb投票となります! 下記リンクから投票をぜひお願いいたします! <br />
                             <Box sx={{ display: 'flex', justifyContent: 'space-around', margin: '0 auto' }}>
-                                <Button href={'https://eggs.mu/music/project/battledeegg25_vote'} style={{ textAlign: 'center', margin: '10px 0 -18px 0', width: '100%' }}> 投票はこちらから! </Button>
-                                <Button href={'#'} style={{ textAlign: 'center', margin: '10px 0 -18px 0', width: '100%' }}> learn more </Button>
+                                <Button href={'https://eggs.mu/music/project/battledeegg25_vote'} style={{ textAlign: 'center', margin: '10px auto -18px auto', width: '70%' }}> 投票はこちらから! </Button>
                             </Box>
                         </NewsContent>
                     </FadeAnimation>
