@@ -90,9 +90,7 @@ const About = () => {
                             imgpass='main.jpg' >
                             battle de egg 2025 1次審査に通過しました! <br />
                             2次審査はファンによるweb投票となります! 下記リンクから投票をぜひお願いいたします! <br />
-                            <Box sx={{ display: 'flex', justifyContent: 'space-around', margin: '0 auto' }}>
-                                <Button href={'https://eggs.mu/music/project/battledeegg25_vote'} style={{ textAlign: 'center', margin: '10px auto -18px auto', width: '70%' }}> 投票はこちらから! </Button>
-                            </Box>
+                            投票は終了しました
                         </NewsContent>
                     </FadeAnimation>
                     <FadeAnimation>
