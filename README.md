@@ -1,7 +1,7 @@
 # bottle diver website
 神戸発のロックバンド、bottle diverのwebサイトです  
 サイトはこちら https://www.bottlediver.com
-## 技術スタック
+## 使用技術
 `TypeScript`  
 `React`  
 `MUI`  
