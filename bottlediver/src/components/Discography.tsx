@@ -36,23 +36,6 @@ const Discography = () => {
 
 
             <FadeAnimation>
-                <Box sx={{ padding: { xs: '0 10px 0 0', sm: '0 10px 0 0' } }}>
-                    <DiscoContent
-                        title='1st Album『Scrawl』'
-                        M={["storm in the bottle", '一閃', 'STROBE', '再散再恣', '未明', 'sixa-1.04.8.596', 'ЯOOF', '透明人間', 'ある日の憂鬱']}
-                        Mnum={9}
-                        jacketpass='1al.jpg'
-                        applelink='https://music.apple.com/jp/album/%E6%9C%AA%E6%98%8E-single/1744125311'
-                        spotifylink='https://open.spotify.com/intl-ja/album/5Rgbl4XLZ78VgPeP4XVegq'
-                        youtubelink='https://music.youtube.com/playlist?list=OLAK5uy_kl46KWk_dw3Y0Rm0va4dM6jBktgpSyhUE'
-                        linelink='https://music.line.me/webapp/album/mb00000000039a83ac'
-                        amazonlink='https://music.amazon.co.jp/albums/B0D32GWR1H'
-                    />
-                </Box>
-            </FadeAnimation>
-
-
-            <FadeAnimation>
                 <Divider variant="middle" />
             </FadeAnimation>
 
