@@ -54,6 +54,21 @@ const Live = () => {
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
                     <LiveContent 
+                        title="2025.03.20 - 『メリケンミュージックナイツ』 @メリケンパーク"
+                        modalTitle="2025.03.20 Thu. 『メリケンミュージックナイツ』 @メリケンパーク"
+                        with="-"
+                        time="START 16:00"
+                        ticket="Free"
+                        link="https://x.com/bottle_diver/status/1900171306609643957"
+                    />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
+            </Box>
+            <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
+                <FadeAnimation>
+                    <LiveContent 
                         title="2025.04.12 - 『夜明けの燈火』 @D×Q神戸"
                         modalTitle="2025.04.12 Sat. 『夜明けの燈火』 @D×Q神戸"
                         with="夜叉子 / アフターブルー / 幻想痛"
