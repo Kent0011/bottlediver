@@ -56,7 +56,7 @@ const Live = () => {
                     <LiveContent 
                         title="2025.03.20 - 『メリケンミュージックナイツ』 @メリケンパーク"
                         modalTitle="2025.03.20 Thu. 『メリケンミュージックナイツ』 @メリケンパーク"
-                        with="-"
+                        with="気づいたら劇場"
                         time="START 16:00"
                         ticket="Free"
                         link="https://x.com/bottle_diver/status/1900171306609643957"
