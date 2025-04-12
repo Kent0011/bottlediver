@@ -54,21 +54,6 @@ const Live = () => {
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
                     <LiveContent 
-                        title="2025.04.12 - 『夜明けの燈火』 @D×Q神戸"
-                        modalTitle="2025.04.12 Sat. 『夜明けの燈火』 @D×Q神戸"
-                        with="夜叉子 / アフターブルー / 幻想痛"
-                        time="OPEN 18:00 / START 18:30"
-                        ticket="一般 ¥2500+1D / 大学生 ¥2000 / 高校生以下 ¥1000"
-                        link="https://x.com/bottle_diver/status/1900171306609643957"
-                    />
-                </FadeAnimation>
-                <FadeAnimation>
-                    <Divider variant="middle" />
-                </FadeAnimation>
-            </Box>
-            <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
-                <FadeAnimation>
-                    <LiveContent 
                         title="2025.04.24 - 『New order』 @寺田町Fireloop"
                         modalTitle="2025.04.24 Thu. 『New order』 @寺田町Fireloop"
                         with="ハコワレ / ジャンナト / Lambiris"
