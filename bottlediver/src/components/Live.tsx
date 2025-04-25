@@ -53,14 +53,7 @@ const Live = () => {
             </FadeAnimation>
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
-                    <LiveContent 
-                        title="2025.04.24 - 『New order』 @寺田町Fireloop"
-                        modalTitle="2025.04.24 Thu. 『New order』 @寺田町Fireloop"
-                        with="ハコワレ / ジャンナト / Lambiris"
-                        time="OPEN 18:30 / START 19:00"
-                        ticket="¥2200 +1D"
-                        link="https://x.com/bottle_diver/status/1900168218939150763"
-                    />
+                    <Box sx={{ textAlign: 'center', padding: '30px 0 30px 0' }}>Comming Soon...</Box>
                 </FadeAnimation>
                 <FadeAnimation>
                     <Divider variant="middle" />
