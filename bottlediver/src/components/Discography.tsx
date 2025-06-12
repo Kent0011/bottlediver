@@ -15,11 +15,16 @@ import { useNavigate } from "react-router-dom";
 import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
 import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
+import { useLocation } from 'react-router-dom';
 import DiscoContent from './DiscoContent';
 
 
 
 const Discography = () => {
+
+    const location = useLocation();
+    const qParams = new URLSearchParams(location.search);
+    const record = qParams.get('record');
 
     return (
         <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto' }}>
@@ -52,6 +57,7 @@ const Discography = () => {
                         youtubelink='https://music.youtube.com/playlist?list=OLAK5uy_kl46KWk_dw3Y0Rm0va4dM6jBktgpSyhUE'
                         linelink='https://music.line.me/webapp/album/mb00000000039a83ac'
                         amazonlink='https://music.amazon.co.jp/albums/B0D32GWR1H'
+                        selected={record === '2'}
                     />
                 </Box>
             </FadeAnimation>
@@ -74,6 +80,7 @@ const Discography = () => {
                         youtubelink='https://music.youtube.com/playlist?list=OLAK5uy_k-hqVLBwMV8UCdVUO3MrmyNiCeE3LHu1k'
                         linelink='https://music.line.me/webapp/album/mb0000000003040676'
                         amazonlink='https://music.amazon.co.jp/albums/B0CG5GKG9T'
+                        selected={record === '1'}
                     />
                 </Box>
             </FadeAnimation>
