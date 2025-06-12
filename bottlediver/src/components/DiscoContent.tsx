@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
@@ -34,11 +34,17 @@ const modalstyle = {
 };
 
 
-const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketpass: string, applelink: string, spotifylink: string, youtubelink: string, linelink: string, amazonlink: string }) => {
+const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketpass: string, applelink: string, spotifylink: string, youtubelink: string, linelink: string, amazonlink: string, selected: boolean }) => {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    useEffect(() => {
+        if (props.selected) {
+            setOpen(true);
+        }
+    }, [props.selected]);
 
     const music = () => {
         const items = []
