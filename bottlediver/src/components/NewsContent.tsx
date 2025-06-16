@@ -17,7 +17,7 @@ const modalstyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: { xs: 'fit-content', sm: '600px' },
+    width: { xs: '80%', sm: '600px' },
     maxWidth: { xs: '80%', sm: '100%' },
     bgcolor: 'white',
     color: '#14202c',
