@@ -53,7 +53,47 @@ const Live = () => {
             </FadeAnimation>
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
-                    <Box sx={{ textAlign: 'center', padding: '30px 0 30px 0' }}>Comming Soon...</Box>
+                    <LiveContent 
+                        title="2025.09.22 - ? ? ?"
+                        modalTitle="? ? ?"
+                        place="大阪"
+                        with="? ? ?"
+                        time="? ? ?"
+                        ticket="? ? ?"
+                        link=""
+                    />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
+            </Box>
+            <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
+                <FadeAnimation>
+                    <LiveContent 
+                        title="2025.10.25 - ? ? ?"
+                        modalTitle="? ? ?"
+                        place="神戸"
+                        with="? ? ?"
+                        time="? ? ?"
+                        ticket="? ? ?"
+                        link=""
+                    />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
+            </Box>
+            <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
+                <FadeAnimation>
+                    <LiveContent 
+                        title="2025.12.12 - ? ? ?"
+                        modalTitle="? ? ?"
+                        place="神戸"
+                        with="? ? ?"
+                        time="? ? ?"
+                        ticket="? ? ?"
+                        link=""
+                    />
                 </FadeAnimation>
                 <FadeAnimation>
                     <Divider variant="middle" />

@@ -28,7 +28,7 @@ const modalstyle = {
 };
 
 
-const LiveContent = (props: { title: string, with: string, modalTitle: string, ticket: string, time: string, link: string }) => {
+const LiveContent = (props: { title: string, place: string, with: string, modalTitle: string, ticket: string, time: string, link: string }) => {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -41,8 +41,8 @@ const LiveContent = (props: { title: string, with: string, modalTitle: string, t
                     <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '16px' }, padding: '5px 0 2px 0' }}>
                         {props.title}
                     </Box>
-                    <Box fontWeight="fontWeightLight" sx={{ display: { xs: 'none', sm: 'block' }, fontSize: { sm: '15px' }, paddingLeft: '3%' }}>
-                        - w.  {props.with}
+                    <Box fontWeight="fontWeightLight" sx={{ display: 'block', fontSize: { xs: '10px', sm: '15px' }, paddingLeft: '3%' }}>
+                        @{props.place}
                     </Box>
                 </Box>
             </Box>
@@ -62,7 +62,8 @@ const LiveContent = (props: { title: string, with: string, modalTitle: string, t
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
                         <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: { xs: '12px', sm: '20px' } }}>
-                            {props.modalTitle}
+                            {props.modalTitle}<br />
+                            @{props.place}
                         </Typography>
                         <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, fontSize: { xs: '11px', sm: '15px' }, lineHeight: 2, width: '100%' }}>
                             With - {props.with}<br />
