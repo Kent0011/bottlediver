@@ -47,7 +47,7 @@ const Discography = () => {
             <FadeAnimation>
                     <DiscoContent
                         title='1st Album『Scrawl』'
-                        M={['storm in the bottle', '一閃', 'STROBE', '再散再恣', '未明', '0.571.024', 'ROOF', '透明人間', 'ある日の憂鬱']}
+                        M={['storm in the bottle', '一閃', 'STROBE', '再散再恣', '未明', '0.571.024', 'ЯOOF', '透明人間', 'ある日の憂鬱']}
                         Mnum={9}
                         jacketpass='scrawl.jpg'
                         applelink='https://music.apple.com/jp/album/'
