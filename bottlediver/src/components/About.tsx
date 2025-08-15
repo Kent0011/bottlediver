@@ -90,7 +90,7 @@ const About = () => {
                             1st Album 『Scrawl』がリリースされました。<br />
                             結成から3年間の集大成、各配信サイトにて配信中です。<br />
                             ぜひお聴きください。<br />
-                            <Button href={`${process.env.PUBLIC_URL}/discography?record=3`} target="_blank" sx={{ margin: '15px 0 -15px 0' }}>Go</Button>
+                            <Button href={`${process.env.PUBLIC_URL}/discography?record=3`} sx={{ margin: '15px 0 -15px 0' }}>Go</Button>
                         </NewsContent>
                     </FadeAnimation>
                     <FadeAnimation>
