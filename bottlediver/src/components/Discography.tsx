@@ -39,6 +39,27 @@ const Discography = () => {
                 <Divider />
             </FadeAnimation>
 
+            <FadeAnimation>
+                <Divider variant="middle" />
+            </FadeAnimation>
+
+
+            <FadeAnimation>
+                    <DiscoContent
+                        title='1st Album『Scrawl』'
+                        M={['storm in the bottle', '一閃', 'STROBE', '再散再恣', '未明', '0.571.024', 'ROOF', '透明人間', 'ある日の憂鬱']}
+                        Mnum={9}
+                        jacketpass='scrawl.jpg'
+                        applelink='https://music.apple.com/jp/album/'
+                        spotifylink='https://open.spotify.com/intl-ja/album/'
+                        youtubelink='https://music.youtube.com/playlist'
+                        linelink='https://music.line.me/webapp/album/'
+                        amazonlink='https://music.amazon.co.jp/albums/'
+                        selected={record === '3'}
+                        album={true}
+                    />
+            </FadeAnimation>
+
 
             <FadeAnimation>
                 <Divider variant="middle" />
@@ -46,7 +67,6 @@ const Discography = () => {
 
 
             <FadeAnimation>
-                <Box sx={{ padding: { xs: '0 20px 0 0', sm: '0 27px 0 0' } }}>
                     <DiscoContent
                         title='2nd Single『未明』'
                         M={['未明', 'STROBE']}
@@ -59,7 +79,6 @@ const Discography = () => {
                         amazonlink='https://music.amazon.co.jp/albums/B0D32GWR1H'
                         selected={record === '2'}
                     />
-                </Box>
             </FadeAnimation>
 
 
