@@ -54,13 +54,14 @@ const Live = () => {
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
                     <LiveContent 
-                        title="2025.09.22 - ? ? ?"
-                        modalTitle="? ? ?"
-                        place="大阪"
-                        with="? ? ?"
-                        time="? ? ?"
-                        ticket="? ? ?"
-                        link=""
+                        title="2025.09.22 - Fireloop 24th Anniversary pre. Overplugged"
+                        modalTitle="Fireloop 24th Anniversary pre. Overplugged"
+                        place="大阪 寺田町Fireloop"
+                        with="CLOVERS HIGH / Bob / endroar"
+                        time="OPEN 18:30 / START 19:00"
+                        ticket="¥2,200"
+                        link="https://x.com/bottle_diver/status/1959602910775644550"
+                        image="20250922.jpg"
                     />
                 </FadeAnimation>
                 <FadeAnimation>
