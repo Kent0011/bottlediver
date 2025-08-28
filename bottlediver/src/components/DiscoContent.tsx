@@ -22,7 +22,7 @@ const modalstyle = {
     left: '50%',
     transform: 'translate(-50%, -50%)',
     width: { xs: 'fit-content', sm: '600px' },
-    maxWidth: { xs: '80%', sm: '100%' },
+    maxWidth: { xs: '90%', sm: '100%' },
     bgcolor: 'white',
     color: '#14202c',
     border: '2px solid #000',
@@ -34,11 +34,17 @@ const modalstyle = {
 };
 
 
-const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketpass: string, applelink: string, spotifylink: string, youtubelink: string, linelink: string, amazonlink: string, selected: boolean }) => {
+const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketpass: string, applelink: string, spotifylink: string, youtubelink: string, linelink: string, amazonlink: string, selected: boolean, album?: boolean }) => {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+    let album = false;
+    if (props.album) {
+        album = true;
+    } else {
+        album = false;
+    }
 
     useEffect(() => {
         if (props.selected) {
@@ -50,30 +56,49 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
         const items = []
         for (let i = 0; i < props.Mnum; i++) {
             items.push (
-                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' }, padding: { xs: '0 0 0 10px', sm: '0 0 0 10px' } }}>
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '10px', sm: '12px' }, padding: { xs: '0 0 0 10px', sm: '0 0 0 10px' } }}>
                     M{i + 1}. {props.M[i]}
                 </Box>
             )
         };
-        return(<Box>{items}</Box>);
+        return(
+            <Box>{items}</Box>
+        );
     };
 
     const modalmusic = () => {
         const items = []
         for (let i = 0; i < props.Mnum; i++) {
             items.push (
-                <Box fontWeight="fontWeightLight" sx={{ fontSize: '15px', textAlign: 'left' }}>
+                <Box fontWeight="fontWeightLight" sx={{ fontSize: album ? '12px' : '15px', textAlign: 'left' }}>
                     M{i + 1}. {props.M[i]}
                 </Box>
             )
         };
-        return(<Box sx={{ width: 'fit-content' }}>{items}</Box>);
+        if (album) {
+            return(
+                <Box sx={{ width: 'fit-content', display: 'flex', flexDirection: 'row', justifyContent: 'space-around', alignItems: 'flex-end', margin: '0 auto' }}>
+                    <Box sx={{ margin: '0 0 0 6px' }}>
+                        {items.slice(0, Math.ceil(props.Mnum / 2))}
+                    </Box>
+                    <Box sx={{ margin: '0 0 0 12px' }}>
+                        {items.slice(Math.ceil(props.Mnum / 2))}
+                    </Box>
+                </Box>
+            );
+        } else {
+            return(
+                <Box sx={{ width: 'fit-content' }}>
+                    {items}
+                </Box>
+            );
+        }
     };
 
     return (
         <Box>
-            <Box sx={{ maxWidth: '600px', margin: { xs: '10% auto', sm: '5% auto' }, justifyContent: 'center', display: 'flex', alignItems: 'center' }}>
-                <Box sx={{ width: '20%', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
+            <Box sx={{ maxWidth: '600px', margin: { xs: '10% auto', sm: '5% auto' }, paddingLeft: { xs: '13%', sm: '10%' }, display: 'flex', alignItems: 'center' }}>
+                <Box sx={{ width: '32%', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
                     <img className='H' onClick={() => { handleOpen() }} src={props.jacketpass} style={{ width: '100%', cursor: 'pointer' }} />
                 </Box>
                 <Box className='H1' onClick={() => { handleOpen() }} sx={{ marginLeft: '12%', textAlign: 'left', Width: '80%' }}>
