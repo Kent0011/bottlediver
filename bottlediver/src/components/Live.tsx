@@ -54,13 +54,45 @@ const Live = () => {
             <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
                 <FadeAnimation>
                     <LiveContent 
-                        title="2025.12.12 - ? ? ?"
-                        modalTitle="? ? ?"
-                        place="神戸"
-                        with="? ? ?"
-                        time="? ? ?"
-                        ticket="? ? ?"
-                        link=""
+                        title="2026.1.9 - Golden Wind"
+                        modalTitle="2026.1.9 - Golden Wind"
+                        place="D×Q 神戸"
+                        with="Dufferin / Norwegian Forest Cat"
+                        time=""
+                        ticket="一般2500円 / 大学生1400円 / 高校生以下400円"
+                        link="https://x.com/dq_kobe2022/status/1993650948791771148?s=46"
+                    />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
+            </Box>
+            <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
+                <FadeAnimation>
+                    <LiveContent 
+                        title="2026.2.11 - ???"
+                        modalTitle="2026.2.11"
+                        place="D×Q 神戸"
+                        with="???"
+                        time="???"
+                        ticket="???"
+                        link="#"
+                    />
+                </FadeAnimation>
+                <FadeAnimation>
+                    <Divider variant="middle" />
+                </FadeAnimation>
+            </Box>
+            <Box sx={{ maxWidth: '800px', margin: '0 auto' }}>
+                <FadeAnimation>
+                    <LiveContent 
+                        title="2026.2.21 - ???"
+                        modalTitle="2026.2.21"
+                        place="KOBE Padoma"
+                        with="???"
+                        time="???"
+                        ticket="???"
+                        link="#"
                     />
                 </FadeAnimation>
                 <FadeAnimation>
