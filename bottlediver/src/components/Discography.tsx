@@ -50,11 +50,11 @@ const Discography = () => {
                         M={['storm in the bottle', '一閃', 'STROBE', '再散再恣', '未明', '0.571.024', 'ЯOOF', '透明人間', 'ある日の憂鬱']}
                         Mnum={9}
                         jacketpass='scrawl.jpg'
-                        applelink='https://music.apple.com/jp/album/'
-                        spotifylink='https://open.spotify.com/intl-ja/album/'
-                        youtubelink='https://music.youtube.com/playlist'
-                        linelink='https://music.line.me/webapp/album/'
-                        amazonlink='https://music.amazon.co.jp/albums/'
+                        applelink='https://music.apple.com/jp/artist/bottle-diver/1703550752'
+                        spotifylink='https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE'
+                        youtubelink='https://music.youtube.com/channel/UCcMl6Fpk77ByOXUXUJSe_gg'
+                        linelink='https://music.line.me/webapp/artist/mi000000001efa2902'
+                        amazonlink='https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver'
                         selected={record === '3'}
                         album={true}
                     />

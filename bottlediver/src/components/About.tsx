@@ -40,7 +40,9 @@ const About = () => {
             <FadeAnimation>
                 <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '12px', sm: '15px' } }}>
                     2023年 結成<br />
-                    2025年10月 1st Album 『Scrawl』リリース<br />
+                    2023年8月 1st Single 『ordinary』リリース<br />
+                    2024年5月 2nd Single 『未明』リリース<br />
+                    2026年2月 1st Album 『Scrawl』リリース<br />
                 </Box>
             </FadeAnimation>
             <FadeAnimation>
@@ -84,13 +86,13 @@ const About = () => {
                 <Box sx={{ width: { xs: '90%', sm: '80%' }, maxWidth: '800px', margin: '0 auto' }}>
                     <FadeAnimation>
                         <NewsContent
-                            title='2025.08.15 - 1st Album 『Scrawl』released'
-                            modalTitle='2025.08.15 - 1st Album 『Scrawl』released'
-                            imgpass='scrawl.jpg' >
-                            1st Album 『Scrawl』がリリースされました。<br />
-                            結成から3年間の集大成、各配信サイトにて配信中です。<br />
-                            ぜひお聴きください。<br />
-                            <Button href={`${process.env.PUBLIC_URL}/discography?record=3`} sx={{ margin: '15px 0 -15px 0' }}>Go</Button>
+                            title='2025.12.28 - 1st Album 『Scrawl』リリース決定'
+                            modalTitle='2025.12.28 - 1st Album 『Scrawl』リリース決定'
+                            imgpass='releasenote.jpg' >
+                            今後のスケジュール<br />
+                            2026.01.07.『再散再恣』YouTubeにて先行公開<br />
+                            2026.01.21.『透明人間』サブスクリプション先行配信<br />
+                            2026.02.11.『Scrawl』サブスクリプション配信開始, CD販売開始<br />
                         </NewsContent>
                     </FadeAnimation>
                     <FadeAnimation>
