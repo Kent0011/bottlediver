@@ -16,9 +16,8 @@ const modalstyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: 'fit-content',
-    minWidth: '50%',
-    maxWidth: '80%',
+    width: '80%',
+    maxWidth: { xs: '350px', sm: '600px' },
     bgcolor: 'white',
     color: '#14202c',
     border: '2px solid #000',
@@ -28,7 +27,7 @@ const modalstyle = {
 };
 
 
-const LiveContent = (props: { title: string, place: string, with: string, modalTitle: string, ticket: string, time: string, link: string }) => {
+const LiveContent = (props: { title: string, place: string, with: string, modalTitle: string, ticket: string, time: string, link: string, image?: string }) => {
 
     const [open, setOpen] = React.useState(false);
     const handleOpen = () => setOpen(true);
@@ -61,16 +60,21 @@ const LiveContent = (props: { title: string, place: string, with: string, modalT
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: { xs: '12px', sm: '20px' } }}>
-                            {props.modalTitle}<br />
-                            @{props.place}
-                        </Typography>
-                        <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, fontSize: { xs: '11px', sm: '15px' }, lineHeight: 2, width: '100%' }}>
-                            With - {props.with}<br />
-                            Ticket - {props.ticket}<br />
-                            Time table - {props.time}
-                        </Typography>
-                        <Button href={props.link} style={{ textAlign: 'center', margin: '10px 25% -18px 25%', width: '50%' }}> learn more </Button>
+                        <Box sx={{ padding: '0' }}>
+                            {props.image && <img src={props.image} alt={props.modalTitle} style={{ width: '70%', height: 'auto', margin: '0 auto', display: 'block' }} />}
+                            <Box sx={{ width: 'fit-content', minWidth: { xs: '200px', sm: '300px' }, margin: '0 auto' }}>
+                                <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: { xs: '12px', sm: '20px' }, mt: '30px', width: 'fit-content' }}>
+                                    {props.modalTitle}<br />
+                                    @{props.place}
+                                </Typography>
+                                <Typography fontWeight="fontWeightLight" id="transition-modal-description" sx={{ mt: 2, fontSize: { xs: '11px', sm: '15px' }, lineHeight: 2, width: 'fit-content' }}>
+                                    With - {props.with}<br />
+                                    Ticket - {props.ticket}<br />
+                                    Time table - {props.time}
+                                </Typography>
+                            </Box>
+                            <Button href={props.link} style={{ textAlign: 'center', margin: '10px 25% -18px 25%', width: '50%' }}> learn more </Button>
+                        </Box>
                     </Box>
                 </Fade>
             </Modal>
