@@ -1,13 +1,8 @@
 import React from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import FadeAnimation from "./FadeAnimation";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
 import Backdrop from "@mui/material/Backdrop";
 
 const modalstyle = {

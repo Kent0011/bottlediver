@@ -1,18 +1,11 @@
 import React, { useEffect } from "react";
-import List from "@mui/material/List";
-import ListItem from "@mui/material/ListItem";
-import ListItemText from "@mui/material/ListItemText";
-import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
-import FadeAnimation from "./FadeAnimation";
 import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
-import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Backdrop from "@mui/material/Backdrop";
 import IconButton from "@mui/material/IconButton";
-import { useNavigate } from "react-router-dom";
-import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
 import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
 
