@@ -1,18 +1,18 @@
-import { render, screen } from '@testing-library/react';
-import FadeAnimation from '../components/FadeAnimation';
+import { render, screen } from "@testing-library/react";
+import FadeAnimation from "../components/FadeAnimation";
 
 // react-intersection-observer のモック
 const mockUseInView = jest.fn();
-jest.mock('react-intersection-observer', () => ({
+jest.mock("react-intersection-observer", () => ({
   useInView: (options: any) => mockUseInView(options),
 }));
 
-describe('FadeAnimation', () => {
+describe("FadeAnimation", () => {
   beforeEach(() => {
     jest.clearAllMocks();
   });
 
-  test('子要素をレンダリングする', () => {
+  test("子要素をレンダリングする", () => {
     mockUseInView.mockReturnValue({
       ref: jest.fn(),
       inView: false,
@@ -21,13 +21,13 @@ describe('FadeAnimation', () => {
     render(
       <FadeAnimation>
         <div>テストコンテンツ</div>
-      </FadeAnimation>
+      </FadeAnimation>,
     );
 
-    expect(screen.getByText('テストコンテンツ')).toBeInTheDocument();
+    expect(screen.getByText("テストコンテンツ")).toBeInTheDocument();
   });
 
-  test('要素が見えない時はvisibleクラスが付与されない', () => {
+  test("要素が見えない時はvisibleクラスが付与されない", () => {
     mockUseInView.mockReturnValue({
       ref: jest.fn(),
       inView: false,
@@ -36,14 +36,14 @@ describe('FadeAnimation', () => {
     const { container } = render(
       <FadeAnimation>
         <div>テストコンテンツ</div>
-      </FadeAnimation>
+      </FadeAnimation>,
     );
 
-    const fadeElement = container.querySelector('.fade-element');
-    expect(fadeElement).not.toHaveClass('visible');
+    const fadeElement = container.querySelector(".fade-element");
+    expect(fadeElement).not.toHaveClass("visible");
   });
 
-  test('要素が見える時はvisibleクラスが付与される', () => {
+  test("要素が見える時はvisibleクラスが付与される", () => {
     mockUseInView.mockReturnValue({
       ref: jest.fn(),
       inView: true,
@@ -52,10 +52,10 @@ describe('FadeAnimation', () => {
     const { container } = render(
       <FadeAnimation>
         <div>テストコンテンツ</div>
-      </FadeAnimation>
+      </FadeAnimation>,
     );
 
-    const fadeElement = container.querySelector('.fade-element');
-    expect(fadeElement).toHaveClass('visible');
+    const fadeElement = container.querySelector(".fade-element");
+    expect(fadeElement).toHaveClass("visible");
   });
 });

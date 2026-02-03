@@ -5,9 +5,8 @@ services:
       context: .
       dockerfile: Dockerfile
     volumes:
-    - .:/app
-    - /app/bottlediver/node_modules
+      - .:/app
+      - /app/bottlediver/node_modules
     ports:
       - 3000:3000
     stdin_open: true #標準入力をコンテナと紐付ける
-

@@ -1,120 +1,121 @@
 .App {
-  text-align: center;
-  background-color: #14202c;
+    text-align: center;
+    background-color: #14202c;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+    height: 40vmin;
+    pointer-events: none;
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
 }
 
 .Header {
-  width: 100%;
-  padding: 5px;
-  position: fixed;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  z-index: 10;
+    width: 100%;
+    padding: 5px;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 10;
 }
 
 .icons {
-  width: 40%;
-  justify-content: space-around;
-  display: flex;
-  margin: 0 3px 0 auto;
+    width: 40%;
+    justify-content: space-around;
+    display: flex;
+    margin: 0 3px 0 auto;
 }
 
 .icons2 {
-  justify-content: space-around;
-  display: flex;
-  margin: 20px 0 0 0;
+    justify-content: space-around;
+    display: flex;
+    margin: 20px 0 0 0;
 }
 
 .App-link {
-  color: #61dafb;
+    color: #61dafb;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .headphoto {
-  width: 100%;
+    width: 100%;
 }
 
 .content {
-  margin: 20px auto;
+    margin: 20px auto;
 }
 
 .Menubar {
-  justify-content: center;
+    justify-content: center;
 }
 
 .fade-element {
-  opacity: 0;
+    opacity: 0;
 }
 
 .fade-element.visible {
-  animation-name: FadeIn;
-  animation-duration: 0.7s;
-  animation-fill-mode: forwards;
-  animation-timing-function: ease-out;
-  opacity: 0;
+    animation-name: FadeIn;
+    animation-duration: 0.7s;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+    opacity: 0;
 }
 
-
 @keyframes FadeIn {
-  0% {
-    opacity: 0;
-    transform: translateY(100px);
-  }
+    0% {
+        opacity: 0;
+        transform: translateY(100px);
+    }
 
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 .H {
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .H1 {
-  transition: 0.3s;
+    transition: 0.3s;
 }
 
 .H2 {
-  transition: 0.2s;
+    transition: 0.2s;
 }
 
 .H:hover {
-  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-	transform: translateY(-4px);
+    box-shadow:
+        0 15px 30px -5px rgba(0, 0, 0, 0.15),
+        0 0 5px rgba(0, 0, 0, 0.1);
+    transform: translateY(-4px);
 }
 
 .H1:hover {
-	transform: translateY(-3px);
+    transform: translateY(-3px);
 }
 
 .H2:hover {
-	transform: scale(1.1);
+    transform: scale(1.1);
 }
 
 iframe {
-  align-items: center;
-  margin: 5px auto 0 auto; 
-  width: 100%;
-  aspect-ratio: 1.78;
+    align-items: center;
+    margin: 5px auto 0 auto;
+    width: 100%;
+    aspect-ratio: 1.78;
 }

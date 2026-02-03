@@ -8,4 +8,3 @@
 ## 開発環境
 `DockerDesktop`  
 `MacBookPro, M1 (2020)`
-
