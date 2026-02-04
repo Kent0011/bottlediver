@@ -68,13 +68,13 @@ const Live = () => {
       <Box sx={{ maxWidth: "800px", margin: "0 auto" }}>
         <FadeAnimation>
           <LiveContent
-            title="2026.1.9 - Golden Wind"
-            modalTitle="2026.1.9 - Golden Wind"
+            title="2026.2.11 - young mad basement"
+            modalTitle="2026.2.11 - young mad basement"
             place="D×Q 神戸"
-            with="Dufferin / Norwegian Forest Cat"
-            time=""
+            with="The NeoN 69s / LOVIN' THE BUNK / and more..."
+            time="OPEN: 18:00 / START: 18:30"
             ticket="一般2500円 / 大学生1400円 / 高校生以下400円"
-            link="https://x.com/dq_kobe2022/status/1993650948791771148?s=46"
+            link="https://x.com/bottle_diver/status/2014298729667547170?s=46"
           />
         </FadeAnimation>
         <FadeAnimation>
@@ -84,29 +84,13 @@ const Live = () => {
       <Box sx={{ maxWidth: "800px", margin: "0 auto" }}>
         <FadeAnimation>
           <LiveContent
-            title="2026.2.11 - ???"
-            modalTitle="2026.2.11"
-            place="D×Q 神戸"
-            with="???"
-            time="???"
-            ticket="???"
-            link="#"
-          />
-        </FadeAnimation>
-        <FadeAnimation>
-          <Divider variant="middle" />
-        </FadeAnimation>
-      </Box>
-      <Box sx={{ maxWidth: "800px", margin: "0 auto" }}>
-        <FadeAnimation>
-          <LiveContent
-            title="2026.2.21 - ???"
-            modalTitle="2026.2.21"
+            title="2026.2.21 - 夜叉子 誘拐Tour Final"
+            modalTitle="2026.2.21 - 夜叉子2nd EP『解体新唱』release tour「誘拐」Final"
             place="KOBE Padoma"
-            with="???"
-            time="???"
-            ticket="???"
-            link="#"
+            with="夜叉子 / NIHIL / 最強マンボウ修羅ぼうや / ポピーハイポ / post public / Wing-Stong"
+            time="OPEN: 15:30 / START: 16:00"
+            ticket="ADV ¥2500 / DOOR ¥3000 (+1D)"
+            link="https://x.com/yashago_845/status/2018163221786726728?s=46"
           />
         </FadeAnimation>
         <FadeAnimation>
