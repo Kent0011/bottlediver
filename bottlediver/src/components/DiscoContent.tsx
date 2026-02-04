@@ -136,7 +136,7 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
                                     <SiYoutubemusic style={{ aspectRatio: 1, width: '100%' }} />
                                 </IconButton>
                                 <IconButton className='H2' onClick={() => { window.open(props.linelink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
-                                    <img src='LINE_MUSIC_secondary_logo_black.png' style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
+                                    <img src='LINE_MUSIC_secondary_logo_black.png' alt="" style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
                                 </IconButton>
                                 <IconButton className='H2' onClick={() => { window.open(props.amazonlink) }} sx={{ color: 'black', aspectRatio: 1, width: '50px' }}>
                                     <SiAmazonmusic style={{ aspectRatio: 1, width: '100%', marginTop: '3px' }} />

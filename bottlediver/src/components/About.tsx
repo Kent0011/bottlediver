@@ -166,7 +166,7 @@ const About = () => {
                                 <SiYoutubemusic style={{ aspectRatio: 1, width: '100%' }} />
                             </IconButton>
                             <IconButton className='H2' onClick={() => { window.open("https://music.line.me/webapp/artist/mi000000001efa2902") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
-                                <img src='LINE_MUSIC_secondary_logo_white.png' style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
+                                <img src='LINE_MUSIC_secondary_logo_white.png' alt="" style={{ height: '22px', margin: '2px -2px 0 -2px' }} />
                             </IconButton>
                             <IconButton className='H2' onClick={() => { window.open("https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver") }} sx={{ aspectRatio: 1, width: { xs: '50px', sm: '15%' } }}>
                                 <SiAmazonmusic style={{ aspectRatio: 1, width: '100%', marginTop: '3px' }} />

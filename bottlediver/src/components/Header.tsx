@@ -7,8 +7,6 @@ import { SiApplemusic } from "react-icons/si";
 
 export const Header = () => {
 
-    const navigate = useNavigate();
-
     return (
         <div className='Header'>
             <img src="logo.png" alt="" style={{width: '40%', padding: '0 5px 0 5px'}}/>
