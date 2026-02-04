@@ -10,7 +10,6 @@ import Box from '@mui/material/Box';
 import CssBaseline from '@mui/material/CssBaseline';
 import Live from './components/Live';
 import Divider from '@mui/material/Divider'
-import FadeAnimation from './components/FadeAnimation';
 import Videos from './components/Videos';
 import { Analytics } from "@vercel/analytics/react"
 

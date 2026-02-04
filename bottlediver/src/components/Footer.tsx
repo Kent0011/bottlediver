@@ -1,9 +1,5 @@
 import React from 'react'
 import Box from '@mui/material/Box'
-import Divider from "@mui/material/Divider"
-import { FaReact } from "react-icons/fa";
-import { SiMui } from "react-icons/si";
-import { IoLogoVercel } from "react-icons/io5";
 
 const Footer = () => {
     return (

@@ -1,18 +1,11 @@
 import React, { useEffect } from 'react'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box'
-import FadeAnimation from './FadeAnimation';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Backdrop from '@mui/material/Backdrop';
 import IconButton from '@mui/material/IconButton';
-import { useNavigate } from "react-router-dom";
-import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
+import { FaSpotify } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
 import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
 
@@ -99,7 +92,7 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
         <Box>
             <Box sx={{ maxWidth: '600px', margin: { xs: '10% auto', sm: '5% auto' }, paddingLeft: { xs: '13%', sm: '10%' }, display: 'flex', alignItems: 'center' }}>
                 <Box sx={{ width: '32%', textAlign: 'left', display: 'flex', alignItems: 'center' }}>
-                    <img className='H' onClick={() => { handleOpen() }} src={props.jacketpass} style={{ width: '100%', cursor: 'pointer' }} />
+                    <img className='H' onClick={() => { handleOpen() }} src={props.jacketpass} alt="" style={{ width: '100%', cursor: 'pointer' }} />
                 </Box>
                 <Box className='H1' onClick={() => { handleOpen() }} sx={{ marginLeft: '12%', textAlign: 'left', Width: '80%' }}>
                     <Box fontWeight="fontWeightLight" sx={{ fontSize: { xs: '15px', sm: '20px' }, padding: { xs: '5px 0 5px 0', sm: '5px 0 5px 0' }, cursor: 'pointer' }}>
@@ -124,7 +117,7 @@ const DiscoContent = (props: { title: string, M: string[], Mnum: number, jacketp
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <img src={props.jacketpass} style={{ width: '200px', justifyContent: 'center', margin: 'auto 5%', aspectRatio: "1" }} />
+                        <img src={props.jacketpass} alt="" style={{ width: '200px', justifyContent: 'center', margin: 'auto 5%', aspectRatio: "1" }} />
                         <Box sx={{ alignItems: 'center', margin: '5% auto' }}>
                             <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: '20px', margin: '8% 0 0 0' }}>
                                 {props.title}

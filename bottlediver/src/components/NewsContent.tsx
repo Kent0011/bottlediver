@@ -1,13 +1,7 @@
 import React from 'react'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
-import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box'
-import FadeAnimation from './FadeAnimation';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import Backdrop from '@mui/material/Backdrop';
 import { ReactNode } from 'react';
@@ -61,7 +55,7 @@ const NewsContent = (props: { title: string, modalTitle: string, children: React
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <img src={props.imgpass} style={{ maxWidth: '80%', maxHeight: '150px', aspectRatio: 'initial', justifyContent: 'center', margin: '3% 0 0 0' }} />
+                        <img src={props.imgpass} alt="" style={{ maxWidth: '80%', maxHeight: '150px', aspectRatio: 'initial', justifyContent: 'center', margin: '3% 0 0 0' }} />
                         <Box sx={{ alignItems: 'center', margin: '0 auto 5% auto' }}>
                             <Typography fontWeight="fontWeightLight" id="transition-modal-title" sx={{ fontSize: '20px', margin: '5% 0 8% 0' }}>
                                 {props.modalTitle}

@@ -1,14 +1,10 @@
 import React from 'react'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box'
 import FadeAnimation from './FadeAnimation';
 import Modal from '@mui/material/Modal';
 import Fade from '@mui/material/Fade';
 import Button from '@mui/material/Button';
-import Typography from '@mui/material/Typography';
 import Backdrop from '@mui/material/Backdrop';
 import LiveContent from './LiveContent';
 
@@ -115,7 +111,7 @@ const Live = () => {
             >
                 <Fade in={open}>
                     <Box fontWeight="fontWeightLight" sx={modalstyle}>
-                        <img src='goodslist.jpg' style={{width: '100%'}}/>
+                        <img src='goodslist.jpg' alt="" style={{width: '100%'}}/>
                     </Box>
                 </Fade>
             </Modal>

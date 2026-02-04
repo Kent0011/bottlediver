@@ -1,18 +1,13 @@
 import React from 'react'
-import List from '@mui/material/List';
-import ListItem from '@mui/material/ListItem';
-import ListItemText from '@mui/material/ListItemText';
 import Divider from '@mui/material/Divider';
 import Box from '@mui/material/Box'
 import FadeAnimation from './FadeAnimation';
 import IconButton from '@mui/material/IconButton';
-import { useNavigate } from "react-router-dom";
 import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiApplemusic } from "react-icons/si";
 import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
 import NewsContent from './NewsContent';
-import Button from '@mui/material/Button';
 
 const About = () => {
     return (
@@ -29,7 +24,7 @@ const About = () => {
             </Box>
             <FadeAnimation>
                 <Box fontWeight="fontWeightLight" sx={{ paddingTop: '40px' }}>
-                    <img src="logo.png" style={{ height: '48px' }} />
+                    <img src="logo.png" alt="" style={{ height: '48px' }} />
                 </Box>
             </FadeAnimation>
             <FadeAnimation>
