@@ -1,6 +1,5 @@
 import React from 'react'
 import IconButton from '@mui/material/IconButton';
-import { useNavigate } from "react-router-dom";
 import { FaSpotify, FaYoutube, FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import { SiApplemusic } from "react-icons/si";
