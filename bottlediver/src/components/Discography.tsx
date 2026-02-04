@@ -1,100 +1,106 @@
-import React from 'react'
-import Divider from '@mui/material/Divider';
-import Box from '@mui/material/Box'
-import FadeAnimation from './FadeAnimation';
-import { useLocation } from 'react-router-dom';
-import DiscoContent from './DiscoContent';
+import React from "react";
+import Divider from "@mui/material/Divider";
+import Box from "@mui/material/Box";
+import FadeAnimation from "./FadeAnimation";
+import { useLocation } from "react-router-dom";
+import DiscoContent from "./DiscoContent";
 
 const Discography = () => {
+  const location = useLocation();
+  const qParams = new URLSearchParams(location.search);
+  const record = qParams.get("record");
 
-    const location = useLocation();
-    const qParams = new URLSearchParams(location.search);
-    const record = qParams.get('record');
-
-    return (
-        <Box sx={{ width: { xs: '90%', sm: '80%' }, marginInline: 'auto' }}>
-            <FadeAnimation>
-                <Box fontWeight="fontWeightLight" fontSize="32px" sx={{ padding: '30px 0 30px 0' }}>
-                    Discography
-                </Box>
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                <Divider />
-            </FadeAnimation>
-
-            <FadeAnimation>
-                <Divider variant="middle" />
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                    <DiscoContent
-                        title='1st Album『Scrawl』'
-                        M={['storm in the bottle', '一閃', 'STROBE', '再散再恣', '未明', '0.571.024', 'ЯOOF', '透明人間', 'ある日の憂鬱']}
-                        Mnum={9}
-                        jacketpass='scrawl.jpg'
-                        applelink='https://music.apple.com/jp/artist/bottle-diver/1703550752'
-                        spotifylink='https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE'
-                        youtubelink='https://music.youtube.com/channel/UCcMl6Fpk77ByOXUXUJSe_gg'
-                        linelink='https://music.line.me/webapp/artist/mi000000001efa2902'
-                        amazonlink='https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver'
-                        selected={record === '3'}
-                        album={true}
-                    />
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                <Divider variant="middle" />
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                    <DiscoContent
-                        title='2nd Single『未明』'
-                        M={['未明', 'STROBE']}
-                        Mnum={2}
-                        jacketpass='2nd.jpg'
-                        applelink='https://music.apple.com/jp/album/%E6%9C%AA%E6%98%8E-single/1744125311'
-                        spotifylink='https://open.spotify.com/intl-ja/album/5Rgbl4XLZ78VgPeP4XVegq'
-                        youtubelink='https://music.youtube.com/playlist?list=OLAK5uy_kl46KWk_dw3Y0Rm0va4dM6jBktgpSyhUE'
-                        linelink='https://music.line.me/webapp/album/mb00000000039a83ac'
-                        amazonlink='https://music.amazon.co.jp/albums/B0D32GWR1H'
-                        selected={record === '2'}
-                    />
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                <Divider variant="middle" />
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                <Box>
-                    <DiscoContent
-                        title='1st Single『ordinary』'
-                        M={['一閃', '日々']}
-                        Mnum={2}
-                        jacketpass='1st.jpg'
-                        applelink='https://music.apple.com/jp/album/ordinary-single/1703550750'
-                        spotifylink='https://open.spotify.com/intl-ja/album/00eiyF0eya7LkCQwa4KlX4'
-                        youtubelink='https://music.youtube.com/playlist?list=OLAK5uy_k-hqVLBwMV8UCdVUO3MrmyNiCeE3LHu1k'
-                        linelink='https://music.line.me/webapp/album/mb0000000003040676'
-                        amazonlink='https://music.amazon.co.jp/albums/B0CG5GKG9T'
-                        selected={record === '1'}
-                    />
-                </Box>
-            </FadeAnimation>
-
-
-            <FadeAnimation>
-                <Divider variant="middle" />
-            </FadeAnimation>
+  return (
+    <Box sx={{ width: { xs: "90%", sm: "80%" }, marginInline: "auto" }}>
+      <FadeAnimation>
+        <Box
+          fontWeight="fontWeightLight"
+          fontSize="32px"
+          sx={{ padding: "30px 0 30px 0" }}
+        >
+          Discography
         </Box>
-    )
-}
+      </FadeAnimation>
 
-export default Discography
+      <FadeAnimation>
+        <Divider />
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <Divider variant="middle" />
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <DiscoContent
+          title="1st Album『Scrawl』"
+          M={[
+            "storm in the bottle",
+            "一閃",
+            "STROBE",
+            "再散再恣",
+            "未明",
+            "0.571.024",
+            "ЯOOF",
+            "透明人間",
+            "ある日の憂鬱",
+          ]}
+          Mnum={9}
+          jacketpass="scrawl.jpg"
+          applelink="https://music.apple.com/jp/artist/bottle-diver/1703550752"
+          spotifylink="https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE"
+          youtubelink="https://music.youtube.com/channel/UCcMl6Fpk77ByOXUXUJSe_gg"
+          linelink="https://music.line.me/webapp/artist/mi000000001efa2902"
+          amazonlink="https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver"
+          selected={record === "3"}
+          album={true}
+        />
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <Divider variant="middle" />
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <DiscoContent
+          title="2nd Single『未明』"
+          M={["未明", "STROBE"]}
+          Mnum={2}
+          jacketpass="2nd.jpg"
+          applelink="https://music.apple.com/jp/album/%E6%9C%AA%E6%98%8E-single/1744125311"
+          spotifylink="https://open.spotify.com/intl-ja/album/5Rgbl4XLZ78VgPeP4XVegq"
+          youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_kl46KWk_dw3Y0Rm0va4dM6jBktgpSyhUE"
+          linelink="https://music.line.me/webapp/album/mb00000000039a83ac"
+          amazonlink="https://music.amazon.co.jp/albums/B0D32GWR1H"
+          selected={record === "2"}
+        />
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <Divider variant="middle" />
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <Box>
+          <DiscoContent
+            title="1st Single『ordinary』"
+            M={["一閃", "日々"]}
+            Mnum={2}
+            jacketpass="1st.jpg"
+            applelink="https://music.apple.com/jp/album/ordinary-single/1703550750"
+            spotifylink="https://open.spotify.com/intl-ja/album/00eiyF0eya7LkCQwa4KlX4"
+            youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_k-hqVLBwMV8UCdVUO3MrmyNiCeE3LHu1k"
+            linelink="https://music.line.me/webapp/album/mb0000000003040676"
+            amazonlink="https://music.amazon.co.jp/albums/B0CG5GKG9T"
+            selected={record === "1"}
+          />
+        </Box>
+      </FadeAnimation>
+
+      <FadeAnimation>
+        <Divider variant="middle" />
+      </FadeAnimation>
+    </Box>
+  );
+};
+
+export default Discography;

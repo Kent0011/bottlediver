@@ -74,7 +74,6 @@
   opacity: 0;
 }
 
-
 @keyframes FadeIn {
   0% {
     opacity: 0;
@@ -100,21 +99,23 @@
 }
 
 .H:hover {
-  box-shadow: 0 15px 30px -5px rgba(0,0,0,.15), 0 0 5px rgba(0,0,0,.1);
-	transform: translateY(-4px);
+  box-shadow:
+    0 15px 30px -5px rgba(0, 0, 0, 0.15),
+    0 0 5px rgba(0, 0, 0, 0.1);
+  transform: translateY(-4px);
 }
 
 .H1:hover {
-	transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 .H2:hover {
-	transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 iframe {
   align-items: center;
-  margin: 5px auto 0 auto; 
+  margin: 5px auto 0 auto;
   width: 100%;
   aspect-ratio: 1.78;
 }
