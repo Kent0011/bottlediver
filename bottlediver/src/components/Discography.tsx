@@ -46,11 +46,11 @@ const Discography = () => {
           ]}
           Mnum={9}
           jacketpass="scrawl.jpg"
-          applelink="https://music.apple.com/jp/artist/bottle-diver/1703550752"
-          spotifylink="https://open.spotify.com/intl-ja/artist/1dSyeRp13r1RiHcobah6pE"
-          youtubelink="https://music.youtube.com/channel/UCcMl6Fpk77ByOXUXUJSe_gg"
-          linelink="https://music.line.me/webapp/artist/mi000000001efa2902"
-          amazonlink="https://music.amazon.co.jp/artists/B0CG5DZ2BY/bottle-diver"
+          applelink="https://music.apple.com/jp/album/scrawl/1863314115"
+          spotifylink="https://open.spotify.com/intl-ja/album/6rpSbGj2TzIe75vFQdjXRA?si=UFxqkHkWTS2ww4HUQHYIcg"
+          youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_kDxxoGHS6-wf173FUFeLbtlSc-iQYWgUs&si=cYBaTp6igasYpUJN"
+          linelink="https://lin.ee/MtXhbXA"
+          amazonlink="https://music.amazon.co.jp/albums/B0GBTH2HV9?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_kiVfAjB9prxjzxn7UA7QPtEtb"
           selected={record === "3"}
           album={true}
         />
