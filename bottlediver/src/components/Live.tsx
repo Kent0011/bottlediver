@@ -68,13 +68,13 @@ const Live = () => {
       <Box sx={{ maxWidth: "800px", margin: "0 auto" }}>
         <FadeAnimation>
           <LiveContent
-            title="2026.2.21 - 夜叉子 誘拐Tour Final"
-            modalTitle="2026.2.21 - 夜叉子2nd EP『解体新唱』release tour「誘拐」Final"
-            place="KOBE Padoma"
-            with="夜叉子 / NIHIL / 最強マンボウ修羅ぼうや / ポピーハイポ / post public / Wing-Stong"
-            time="OPEN: 15:30 / START: 16:00"
-            ticket="ADV ¥2500 / DOOR ¥3000 (+1D)"
-            link="https://x.com/yashago_845/status/2018163221786726728?s=46"
+            title="2026.5.14 - overplugged"
+            modalTitle="2026.5.14 - Fireloop presents overplugged"
+            place="寺田町Fireloop"
+            with="Aporath（愛媛） / BACHICO / いろにほへと / スクールガールズエンド"
+            time="OPEN: 18:00 / START: 18:30"
+            ticket="ADV ¥2400 / DOOR ¥2400"
+            link="https://x.com/bottle_diver/status/2042589312878022776"
           />
         </FadeAnimation>
         <FadeAnimation>
