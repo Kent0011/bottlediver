@@ -1,8 +1,7 @@
-import React from "react";
 import Box from "@mui/material/Box";
 import Tabs from "@mui/material/Tabs";
 import Tab from "@mui/material/Tab";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import HeadphonesIcon from "@mui/icons-material/Headphones";
 import SpeakerIcon from "@mui/icons-material/Speaker";
 import MusicVideoIcon from "@mui/icons-material/MusicVideo";
@@ -15,24 +14,22 @@ function a11yProps(index: number) {
   };
 }
 
+const pathToValue: Record<string, number> = {
+  "/": 0,
+  "/discography": 1,
+  "/live": 2,
+  "/videos": 3,
+};
+
+const valueToPath = ["/", "/discography", "/live", "/videos"];
+
 const Menu = () => {
-  const [value, setValue] = React.useState(0);
   const navigate = useNavigate();
+  const location = useLocation();
+  const value = pathToValue[location.pathname] ?? 0;
 
   const handleChange = (event: React.SyntheticEvent, newValue: number) => {
-    setValue(newValue);
-    if (newValue === 0) {
-      navigate("/");
-    }
-    if (newValue === 1) {
-      navigate("/discography");
-    }
-    if (newValue === 2) {
-      navigate("/live");
-    }
-    if (newValue === 3) {
-      navigate("/videos");
-    }
+    navigate(valueToPath[newValue]);
   };
 
   return (
