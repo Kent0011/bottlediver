@@ -3,8 +3,11 @@ import Divider from "@mui/material/Divider";
 import Box from "@mui/material/Box";
 import FadeAnimation from "./FadeAnimation";
 import VideosContent from "./VideosContent";
+import { useVideos } from "../api/hooks";
 
 const Videos = () => {
+  const items = useVideos();
+
   return (
     <Box sx={{ width: { xs: "90%", md: "80%" }, marginInline: "auto" }}>
       <FadeAnimation>
@@ -20,42 +23,16 @@ const Videos = () => {
         <Divider />
       </FadeAnimation>
       <Box sx={{ maxWidth: "800px", margin: "0 auto" }}>
-        <FadeAnimation>
-          <VideosContent
-            title="[Live video] 未明 - bottle diver"
-            src="https://www.youtube.com/embed/-hGQfkXrHXg"
-          />
-        </FadeAnimation>
-        <FadeAnimation>
-          <Divider variant="middle" />
-        </FadeAnimation>
-        <FadeAnimation>
-          <VideosContent
-            title="[MV] 一閃 - bottle diver"
-            src="https://www.youtube.com/embed/6X4GLucTnKo"
-          />
-        </FadeAnimation>
-        <FadeAnimation>
-          <Divider variant="middle" />
-        </FadeAnimation>
-        <FadeAnimation>
-          <VideosContent
-            title="[MV] 日々 - bottle diver"
-            src="https://www.youtube.com/embed/mvN_CmPTaTg"
-          />
-        </FadeAnimation>
-        <FadeAnimation>
-          <Divider variant="middle" />
-        </FadeAnimation>
-        <FadeAnimation>
-          <VideosContent
-            title="[Live video] 一閃 - bottle diver"
-            src="https://www.youtube.com/embed/6QEm47ajExU"
-          />
-        </FadeAnimation>
-        <FadeAnimation>
-          <Divider variant="middle" />
-        </FadeAnimation>
+        {items.map((item) => (
+          <React.Fragment key={item.id}>
+            <FadeAnimation>
+              <VideosContent title={item.title} link={item.link} />
+            </FadeAnimation>
+            <FadeAnimation>
+              <Divider variant="middle" />
+            </FadeAnimation>
+          </React.Fragment>
+        ))}
       </Box>
     </Box>
   );

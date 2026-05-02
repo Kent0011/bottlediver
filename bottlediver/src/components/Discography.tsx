@@ -4,11 +4,13 @@ import Box from "@mui/material/Box";
 import FadeAnimation from "./FadeAnimation";
 import { useLocation } from "react-router-dom";
 import DiscoContent from "./DiscoContent";
+import { useDiscography } from "../api/hooks";
 
 const Discography = () => {
   const location = useLocation();
   const qParams = new URLSearchParams(location.search);
   const record = qParams.get("record");
+  const items = useDiscography();
 
   return (
     <Box sx={{ width: { xs: "90%", sm: "80%" }, marginInline: "auto" }}>
@@ -30,75 +32,27 @@ const Discography = () => {
         <Divider variant="middle" />
       </FadeAnimation>
 
-      <FadeAnimation>
-        <DiscoContent
-          title="1st Album『Scrawl』"
-          M={[
-            "storm in the bottle",
-            "一閃",
-            "STROBE",
-            "再散再恣",
-            "未明",
-            "0.571.024",
-            "ЯOOF",
-            "透明人間",
-            "ある日の憂鬱",
-          ]}
-          Mnum={9}
-          jacketpass="/scrawl.jpg"
-          applelink="https://music.apple.com/jp/album/scrawl/1863314115"
-          spotifylink="https://open.spotify.com/intl-ja/album/6rpSbGj2TzIe75vFQdjXRA?si=UFxqkHkWTS2ww4HUQHYIcg"
-          youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_kDxxoGHS6-wf173FUFeLbtlSc-iQYWgUs&si=cYBaTp6igasYpUJN"
-          linelink="https://lin.ee/MtXhbXA"
-          amazonlink="https://music.amazon.co.jp/albums/B0GBTH2HV9?marketplaceId=A1VC38T7YXB528&musicTerritory=JP&ref=dm_sh_kiVfAjB9prxjzxn7UA7QPtEtb"
-          selected={record === "3"}
-          album={true}
-        />
-      </FadeAnimation>
+      {items.map((item) => (
+        <React.Fragment key={item.id}>
+          <FadeAnimation>
+            <DiscoContent
+              title={item.title}
+              musics={item.musics}
+              image={item.image}
+              applemusic_link={item.applemusic_link}
+              spotify_link={item.spotify_link}
+              youtubemusic_link={item.youtubemusic_link}
+              linemusic_link={item.linemusic_link}
+              amazonmusic_link={item.amazonmusic_link}
+              selected={record === item.id}
+            />
+          </FadeAnimation>
 
-      <FadeAnimation>
-        <Divider variant="middle" />
-      </FadeAnimation>
-
-      <FadeAnimation>
-        <DiscoContent
-          title="2nd Single『未明』"
-          M={["未明", "STROBE"]}
-          Mnum={2}
-          jacketpass="/2nd.jpg"
-          applelink="https://music.apple.com/jp/album/%E6%9C%AA%E6%98%8E-single/1744125311"
-          spotifylink="https://open.spotify.com/intl-ja/album/5Rgbl4XLZ78VgPeP4XVegq"
-          youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_kl46KWk_dw3Y0Rm0va4dM6jBktgpSyhUE"
-          linelink="https://music.line.me/webapp/album/mb00000000039a83ac"
-          amazonlink="https://music.amazon.co.jp/albums/B0D32GWR1H"
-          selected={record === "2"}
-        />
-      </FadeAnimation>
-
-      <FadeAnimation>
-        <Divider variant="middle" />
-      </FadeAnimation>
-
-      <FadeAnimation>
-        <Box>
-          <DiscoContent
-            title="1st Single『ordinary』"
-            M={["一閃", "日々"]}
-            Mnum={2}
-            jacketpass="/1st.jpg"
-            applelink="https://music.apple.com/jp/album/ordinary-single/1703550750"
-            spotifylink="https://open.spotify.com/intl-ja/album/00eiyF0eya7LkCQwa4KlX4"
-            youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_k-hqVLBwMV8UCdVUO3MrmyNiCeE3LHu1k"
-            linelink="https://music.line.me/webapp/album/mb0000000003040676"
-            amazonlink="https://music.amazon.co.jp/albums/B0CG5GKG9T"
-            selected={record === "1"}
-          />
-        </Box>
-      </FadeAnimation>
-
-      <FadeAnimation>
-        <Divider variant="middle" />
-      </FadeAnimation>
+          <FadeAnimation>
+            <Divider variant="middle" />
+          </FadeAnimation>
+        </React.Fragment>
+      ))}
     </Box>
   );
 };

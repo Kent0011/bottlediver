@@ -7,6 +7,7 @@ import Fade from "@mui/material/Fade";
 import Button from "@mui/material/Button";
 import Backdrop from "@mui/material/Backdrop";
 import LiveContent from "./LiveContent";
+import { useLive } from "../api/hooks";
 
 const modalstyle = {
   position: "absolute",
@@ -27,6 +28,7 @@ const Live = () => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const items = useLive();
 
   return (
     <Box sx={{ width: { xs: "90%", md: "80%" }, marginInline: "auto" }}>
@@ -66,20 +68,24 @@ const Live = () => {
         <Divider />
       </FadeAnimation>
       <Box sx={{ maxWidth: "800px", margin: "0 auto" }}>
-        <FadeAnimation>
-          <LiveContent
-            title="2026.5.14 - overplugged"
-            modalTitle="2026.5.14 - Fireloop presents overplugged"
-            place="寺田町Fireloop"
-            with="Aporath（愛媛） / BACHICO / いろにほへと / スクールガールズエンド"
-            time="OPEN: 18:00 / START: 18:30"
-            ticket="ADV ¥2400 / DOOR ¥2400"
-            link="https://x.com/bottle_diver/status/2042589312878022776"
-          />
-        </FadeAnimation>
-        <FadeAnimation>
-          <Divider variant="middle" />
-        </FadeAnimation>
+        {items.map((item) => (
+          <React.Fragment key={item.id}>
+            <FadeAnimation>
+              <LiveContent
+                title={item.title}
+                where={item.where}
+                with={item.with}
+                ticket={item.ticket}
+                time={item.time}
+                link={item.link}
+                image={item.image}
+              />
+            </FadeAnimation>
+            <FadeAnimation>
+              <Divider variant="middle" />
+            </FadeAnimation>
+          </React.Fragment>
+        ))}
       </Box>
 
       <Modal

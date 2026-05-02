@@ -38,9 +38,6 @@ type ResourceDefinition = {
   fields: FieldDefinition[];
 };
 
-const SESSION_USERNAME = "admin_username";
-const SESSION_PASSWORD = "admin_password";
-
 const resourceDefinitions: ResourceDefinition[] = [
   {
     key: "news",
@@ -305,24 +302,15 @@ const Admin = () => {
   );
   const expectedUsername = process.env.REACT_APP_BASIC_USERNAME ?? "";
   const expectedPassword = process.env.REACT_APP_BASIC_PASSWORD ?? "";
-  const [username, setUsername] = useState(
-    () => window.sessionStorage.getItem(SESSION_USERNAME) ?? "",
-  );
-  const [password, setPassword] = useState(
-    () => window.sessionStorage.getItem(SESSION_PASSWORD) ?? "",
-  );
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
   const matchesExpectedCredentials = useCallback(
     (candidateUsername: string, candidatePassword: string) =>
       candidateUsername === expectedUsername &&
       candidatePassword === expectedPassword,
     [expectedPassword, expectedUsername],
   );
-  const [isAuthenticated, setIsAuthenticated] = useState(() =>
-    matchesExpectedCredentials(
-      window.sessionStorage.getItem(SESSION_USERNAME) ?? "",
-      window.sessionStorage.getItem(SESSION_PASSWORD) ?? "",
-    ),
-  );
+  const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [selectedTab, setSelectedTab] = useState(0);
   const [itemsByResource, setItemsByResource] = useState(createEmptyItems);
   const [forms, setForms] = useState(createEmptyForms);
@@ -498,8 +486,6 @@ const Admin = () => {
 
     try {
       if (!matchesExpectedCredentials(username, password)) {
-        window.sessionStorage.removeItem(SESSION_USERNAME);
-        window.sessionStorage.removeItem(SESSION_PASSWORD);
         setIsAuthenticated(false);
         setItemsByResource(createEmptyItems());
         setForms(createEmptyForms());
@@ -508,8 +494,6 @@ const Admin = () => {
         return;
       }
 
-      window.sessionStorage.setItem(SESSION_USERNAME, username);
-      window.sessionStorage.setItem(SESSION_PASSWORD, password);
       setApiBaseUrl(normalizeBaseUrl(apiBaseUrl));
       setIsAuthenticated(true);
       await loadAllResources(normalizeBaseUrl(apiBaseUrl), {
@@ -534,8 +518,6 @@ const Admin = () => {
   };
 
   const handleLogout = () => {
-    window.sessionStorage.removeItem(SESSION_USERNAME);
-    window.sessionStorage.removeItem(SESSION_PASSWORD);
     setIsAuthenticated(false);
     setItemsByResource(createEmptyItems());
     setForms(createEmptyForms());

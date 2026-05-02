@@ -23,9 +23,8 @@ const modalstyle = {
 
 const LiveContent = (props: {
   title: string;
-  place: string;
-  with: string;
-  modalTitle: string;
+  where: string;
+  with: string[];
   ticket: string;
   time: string;
   link: string;
@@ -34,6 +33,7 @@ const LiveContent = (props: {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const lineup = props.with.join(" / ");
 
   return (
     <Box>
@@ -66,7 +66,7 @@ const LiveContent = (props: {
               paddingLeft: "3%",
             }}
           >
-            @{props.place}
+            @{props.where}
           </Box>
         </Box>
       </Box>
@@ -89,7 +89,7 @@ const LiveContent = (props: {
               {props.image && (
                 <img
                   src={props.image}
-                  alt={props.modalTitle}
+                  alt={props.title}
                   style={{
                     width: "70%",
                     height: "auto",
@@ -114,8 +114,8 @@ const LiveContent = (props: {
                     width: "fit-content",
                   }}
                 >
-                  {props.modalTitle}
-                  <br />@{props.place}
+                  {props.title}
+                  <br />@{props.where}
                 </Typography>
                 <Typography
                   fontWeight="fontWeightLight"
@@ -127,7 +127,7 @@ const LiveContent = (props: {
                     width: "fit-content",
                   }}
                 >
-                  With - {props.with}
+                  With - {lineup}
                   <br />
                   Ticket - {props.ticket}
                   <br />
