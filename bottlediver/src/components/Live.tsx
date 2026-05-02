@@ -97,7 +97,7 @@ const Live = () => {
       >
         <Fade in={open}>
           <Box fontWeight="fontWeightLight" sx={modalstyle}>
-            <img src="goodslist.jpg" alt="" style={{ width: "100%" }} />
+            <img src="/goodslist.jpg" alt="" style={{ width: "100%" }} />
           </Box>
         </Fade>
       </Modal>

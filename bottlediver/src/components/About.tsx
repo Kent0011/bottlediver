@@ -28,7 +28,7 @@ const About = () => {
       </Box>
       <FadeAnimation>
         <Box fontWeight="fontWeightLight" sx={{ paddingTop: "40px" }}>
-          <img src="logo.png" alt="" style={{ height: "48px" }} />
+          <img src="/logo.png" alt="" style={{ height: "48px" }} />
         </Box>
       </FadeAnimation>
       <FadeAnimation>
@@ -110,7 +110,7 @@ const About = () => {
             <NewsContent
               title="2025.12.28 - 1st Album 『Scrawl』リリース決定"
               modalTitle="2025.12.28 - 1st Album 『Scrawl』リリース決定"
-              imgpass="releasenote.jpg"
+              imgpass="/releasenote.jpg"
             >
               今後のスケジュール
               <br />
@@ -137,7 +137,7 @@ const About = () => {
             <NewsContent
               title="2025.01.17 - battle de egg 2025 2次審査 web投票スタート!"
               modalTitle="2025.01.17 - battle de egg 2025 2次審査 web投票スタート!"
-              imgpass="main.jpg"
+              imgpass="/main.jpg"
             >
               battle de egg 2025 1次審査に通過しました! <br />
               2次審査はファンによるweb投票となります!
@@ -160,7 +160,7 @@ const About = () => {
             <NewsContent
               title="2024.12.30 - 夜叉子『半神半鬼』 Thank you for comming!"
               modalTitle="2024.12.30 - 夜叉子『半神半鬼』 Thank you for comming!"
-              imgpass="news1.jpg"
+              imgpass="/news1.jpg"
             >
               夜叉子 1st Anniversary & EP release party 『半神半鬼』
               ご来場頂いた皆様、ありがとうございました！
@@ -181,7 +181,7 @@ const About = () => {
             <NewsContent
               title="2024.12.19 - bottle diver 公式サイト open!"
               modalTitle="2024.12.19 - bottle diver 公式サイト open!"
-              imgpass="main.jpg"
+              imgpass="/main.jpg"
             >
               bottlediverの公式ウェブサイトがオープンしました!
               今後のライブ情報やリリース情報などを随時更新していきますので、お楽しみに!
@@ -272,7 +272,7 @@ const About = () => {
                 sx={{ aspectRatio: 1, width: { xs: "50px", sm: "15%" } }}
               >
                 <img
-                  src="LINE_MUSIC_secondary_logo_white.png"
+                  src="/LINE_MUSIC_secondary_logo_white.png"
                   alt=""
                   style={{ height: "22px", margin: "2px -2px 0 -2px" }}
                 />

@@ -4,10 +4,11 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    env_file:
+      - ./bottlediver/.env
     volumes:
     - .:/app
     - /app/bottlediver/node_modules
     ports:
       - 3000:3000
     stdin_open: true #標準入力をコンテナと紐付ける
-

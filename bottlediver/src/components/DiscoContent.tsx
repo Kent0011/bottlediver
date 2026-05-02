@@ -241,7 +241,7 @@ const DiscoContent = (props: {
                   sx={{ color: "black", aspectRatio: 1, width: "50px" }}
                 >
                   <img
-                    src="LINE_MUSIC_secondary_logo_black.png"
+                    src="/LINE_MUSIC_secondary_logo_black.png"
                     alt=""
                     style={{ height: "22px", margin: "2px -2px 0 -2px" }}
                   />

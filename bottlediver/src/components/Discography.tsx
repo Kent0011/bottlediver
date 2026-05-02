@@ -45,7 +45,7 @@ const Discography = () => {
             "ある日の憂鬱",
           ]}
           Mnum={9}
-          jacketpass="scrawl.jpg"
+          jacketpass="/scrawl.jpg"
           applelink="https://music.apple.com/jp/album/scrawl/1863314115"
           spotifylink="https://open.spotify.com/intl-ja/album/6rpSbGj2TzIe75vFQdjXRA?si=UFxqkHkWTS2ww4HUQHYIcg"
           youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_kDxxoGHS6-wf173FUFeLbtlSc-iQYWgUs&si=cYBaTp6igasYpUJN"
@@ -65,7 +65,7 @@ const Discography = () => {
           title="2nd Single『未明』"
           M={["未明", "STROBE"]}
           Mnum={2}
-          jacketpass="2nd.jpg"
+          jacketpass="/2nd.jpg"
           applelink="https://music.apple.com/jp/album/%E6%9C%AA%E6%98%8E-single/1744125311"
           spotifylink="https://open.spotify.com/intl-ja/album/5Rgbl4XLZ78VgPeP4XVegq"
           youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_kl46KWk_dw3Y0Rm0va4dM6jBktgpSyhUE"
@@ -85,7 +85,7 @@ const Discography = () => {
             title="1st Single『ordinary』"
             M={["一閃", "日々"]}
             Mnum={2}
-            jacketpass="1st.jpg"
+            jacketpass="/1st.jpg"
             applelink="https://music.apple.com/jp/album/ordinary-single/1703550750"
             spotifylink="https://open.spotify.com/intl-ja/album/00eiyF0eya7LkCQwa4KlX4"
             youtubelink="https://music.youtube.com/playlist?list=OLAK5uy_k-hqVLBwMV8UCdVUO3MrmyNiCeE3LHu1k"
