@@ -8,7 +8,7 @@ export const Header = () => {
   return (
     <div className="Header">
       <img
-        src="logo.png"
+        src="/logo.png"
         alt=""
         style={{ width: "40%", padding: "0 5px 0 5px" }}
       />

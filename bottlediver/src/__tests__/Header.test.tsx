@@ -21,9 +21,9 @@ describe('Header', () => {
   test('ロゴ画像が表示される', () => {
     const { container } = render(<Header />);
 
-    const logo = container.querySelector('img[src="logo.png"]');
+    const logo = container.querySelector('img[src="/logo.png"]');
     expect(logo).toBeInTheDocument();
-    expect(logo).toHaveAttribute('src', 'logo.png');
+    expect(logo).toHaveAttribute('src', '/logo.png');
   });
 
   test('5つのソーシャルメディアボタンが表示される', () => {

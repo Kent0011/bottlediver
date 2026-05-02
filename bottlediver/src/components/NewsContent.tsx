@@ -4,7 +4,6 @@ import Modal from "@mui/material/Modal";
 import Fade from "@mui/material/Fade";
 import Typography from "@mui/material/Typography";
 import Backdrop from "@mui/material/Backdrop";
-import { ReactNode } from "react";
 
 const modalstyle = {
   position: "absolute",
@@ -25,9 +24,8 @@ const modalstyle = {
 
 const NewsContent = (props: {
   title: string;
-  modalTitle: string;
-  children: ReactNode;
-  imgpass: string;
+  content: string;
+  image?: string;
 }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
@@ -73,24 +71,26 @@ const NewsContent = (props: {
       >
         <Fade in={open}>
           <Box fontWeight="fontWeightLight" sx={modalstyle}>
-            <img
-              src={props.imgpass}
-              alt=""
-              style={{
-                maxWidth: "80%",
-                maxHeight: "150px",
-                aspectRatio: "initial",
-                justifyContent: "center",
-                margin: "3% 0 0 0",
-              }}
-            />
+            {props.image && (
+              <img
+                src={props.image}
+                alt=""
+                style={{
+                  maxWidth: "80%",
+                  maxHeight: "150px",
+                  aspectRatio: "initial",
+                  justifyContent: "center",
+                  margin: "3% 0 0 0",
+                }}
+              />
+            )}
             <Box sx={{ alignItems: "center", margin: "0 auto 5% auto" }}>
               <Typography
                 fontWeight="fontWeightLight"
                 id="transition-modal-title"
                 sx={{ fontSize: "20px", margin: "5% 0 8% 0" }}
               >
-                {props.modalTitle}
+                {props.title}
               </Typography>
               <Typography
                 fontWeight="fontWeightLight"
@@ -101,9 +101,10 @@ const NewsContent = (props: {
                   lineHeight: 2,
                   width: "100%",
                   marginInline: "auto",
+                  whiteSpace: "pre-line",
                 }}
               >
-                {props.children}
+                {props.content}
               </Typography>
             </Box>
           </Box>

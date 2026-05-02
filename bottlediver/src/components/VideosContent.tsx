@@ -20,10 +20,27 @@ const modalstyle = {
   alignItems: "center",
 };
 
-const VideosContent = (props: { title: string; src: string }) => {
+const toEmbedUrl = (link: string) => {
+  try {
+    const url = new URL(link);
+    if (url.hostname === "youtu.be") {
+      return `https://www.youtube.com/embed${url.pathname}`;
+    }
+    const videoId = url.searchParams.get("v");
+    if (videoId) {
+      return `https://www.youtube.com/embed/${videoId}`;
+    }
+  } catch {
+    // fall through
+  }
+  return link;
+};
+
+const VideosContent = (props: { title: string; link: string }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const embedSrc = toEmbedUrl(props.link);
 
   return (
     <Box>
@@ -69,7 +86,7 @@ const VideosContent = (props: { title: string; src: string }) => {
             <iframe
               title="player"
               id="player"
-              src={props.src}
+              src={embedSrc}
               rel="1"
               frameBorder="0"
               allowFullScreen

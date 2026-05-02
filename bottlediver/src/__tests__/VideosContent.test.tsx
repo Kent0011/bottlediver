@@ -10,7 +10,7 @@ jest.mock('react-intersection-observer', () => ({
 describe('VideosContent', () => {
   const mockProps = {
     title: 'テスト動画タイトル',
-    src: 'https://www.youtube.com/embed/test123',
+    link: 'https://www.youtube.com/watch?v=test123',
   };
 
   beforeEach(() => {
@@ -58,7 +58,7 @@ describe('VideosContent', () => {
     });
   });
 
-  test('モーダル内のiframeに正しい属性が設定される', async () => {
+  test('watch URL が embed URL に変換されて iframe に渡る', async () => {
     render(<VideosContent {...mockProps} />);
 
     const titleElement = screen.getByText('テスト動画タイトル');
@@ -68,14 +68,27 @@ describe('VideosContent', () => {
       const iframe = document.querySelector('iframe');
       expect(iframe).toBeInTheDocument();
 
-      // src属性の確認
+      // src 属性は embed 形式に変換される
       expect(iframe?.getAttribute('src')).toBe('https://www.youtube.com/embed/test123');
 
-      // allowFullScreen属性の確認
+      // allowFullScreen 属性の確認
       expect(iframe?.hasAttribute('allowfullscreen')).toBe(true);
 
-      // frameBorder属性の確認
+      // frameBorder 属性の確認
       expect(iframe?.getAttribute('frameborder')).toBe('0');
+    });
+  });
+
+  test('youtu.be 短縮 URL も embed URL に変換される', async () => {
+    render(
+      <VideosContent title="short" link="https://youtu.be/abcXYZ" />,
+    );
+
+    fireEvent.click(screen.getByText('short'));
+
+    await waitFor(() => {
+      const iframe = document.querySelector('iframe');
+      expect(iframe?.getAttribute('src')).toBe('https://www.youtube.com/embed/abcXYZ');
     });
   });
 });

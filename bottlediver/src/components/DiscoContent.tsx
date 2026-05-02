@@ -9,6 +9,8 @@ import { FaSpotify } from "react-icons/fa";
 import { SiApplemusic } from "react-icons/si";
 import { SiYoutubemusic, SiAmazonmusic } from "react-icons/si";
 
+const ALBUM_TRACK_THRESHOLD = 8;
+
 const modalstyle = {
   position: "absolute",
   top: "50%",
@@ -28,26 +30,19 @@ const modalstyle = {
 
 const DiscoContent = (props: {
   title: string;
-  M: string[];
-  Mnum: number;
-  jacketpass: string;
-  applelink: string;
-  spotifylink: string;
-  youtubelink: string;
-  linelink: string;
-  amazonlink: string;
+  musics: string[];
+  image?: string;
+  applemusic_link: string;
+  spotify_link: string;
+  youtubemusic_link: string;
+  linemusic_link: string;
+  amazonmusic_link: string;
   selected: boolean;
-  album?: boolean;
 }) => {
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
-  let album = false;
-  if (props.album) {
-    album = true;
-  } else {
-    album = false;
-  }
+  const album = props.musics.length >= ALBUM_TRACK_THRESHOLD;
 
   useEffect(() => {
     if (props.selected) {
@@ -55,37 +50,36 @@ const DiscoContent = (props: {
     }
   }, [props.selected]);
 
-  const music = () => {
-    const items = [];
-    for (let i = 0; i < props.Mnum; i++) {
-      items.push(
+  const music = () => (
+    <Box>
+      {props.musics.map((name, index) => (
         <Box
+          key={`${name}-${index}`}
           fontWeight="fontWeightLight"
           sx={{
             fontSize: { xs: "10px", sm: "12px" },
             padding: { xs: "0 0 0 10px", sm: "0 0 0 10px" },
           }}
         >
-          M{i + 1}. {props.M[i]}
-        </Box>,
-      );
-    }
-    return <Box>{items}</Box>;
-  };
+          M{index + 1}. {name}
+        </Box>
+      ))}
+    </Box>
+  );
 
   const modalmusic = () => {
-    const items = [];
-    for (let i = 0; i < props.Mnum; i++) {
-      items.push(
-        <Box
-          fontWeight="fontWeightLight"
-          sx={{ fontSize: album ? "12px" : "15px", textAlign: "left" }}
-        >
-          M{i + 1}. {props.M[i]}
-        </Box>,
-      );
-    }
+    const items = props.musics.map((name, index) => (
+      <Box
+        key={`${name}-${index}`}
+        fontWeight="fontWeightLight"
+        sx={{ fontSize: album ? "12px" : "15px", textAlign: "left" }}
+      >
+        M{index + 1}. {name}
+      </Box>
+    ));
+
     if (album) {
+      const half = Math.ceil(props.musics.length / 2);
       return (
         <Box
           sx={{
@@ -97,17 +91,12 @@ const DiscoContent = (props: {
             margin: "0 auto",
           }}
         >
-          <Box sx={{ margin: "0 0 0 6px" }}>
-            {items.slice(0, Math.ceil(props.Mnum / 2))}
-          </Box>
-          <Box sx={{ margin: "0 0 0 12px" }}>
-            {items.slice(Math.ceil(props.Mnum / 2))}
-          </Box>
+          <Box sx={{ margin: "0 0 0 6px" }}>{items.slice(0, half)}</Box>
+          <Box sx={{ margin: "0 0 0 12px" }}>{items.slice(half)}</Box>
         </Box>
       );
-    } else {
-      return <Box sx={{ width: "fit-content" }}>{items}</Box>;
     }
+    return <Box sx={{ width: "fit-content" }}>{items}</Box>;
   };
 
   return (
@@ -129,21 +118,19 @@ const DiscoContent = (props: {
             alignItems: "center",
           }}
         >
-          <img
-            className="H"
-            onClick={() => {
-              handleOpen();
-            }}
-            src={props.jacketpass}
-            alt=""
-            style={{ width: "100%", cursor: "pointer" }}
-          />
+          {props.image && (
+            <img
+              className="H"
+              onClick={handleOpen}
+              src={props.image}
+              alt=""
+              style={{ width: "100%", cursor: "pointer" }}
+            />
+          )}
         </Box>
         <Box
           className="H1"
-          onClick={() => {
-            handleOpen();
-          }}
+          onClick={handleOpen}
           sx={{ marginLeft: "12%", textAlign: "left", Width: "80%" }}
         >
           <Box
@@ -175,16 +162,18 @@ const DiscoContent = (props: {
       >
         <Fade in={open}>
           <Box fontWeight="fontWeightLight" sx={modalstyle}>
-            <img
-              src={props.jacketpass}
-              alt=""
-              style={{
-                width: "200px",
-                justifyContent: "center",
-                margin: "auto 5%",
-                aspectRatio: "1",
-              }}
-            />
+            {props.image && (
+              <img
+                src={props.image}
+                alt=""
+                style={{
+                  width: "200px",
+                  justifyContent: "center",
+                  margin: "auto 5%",
+                  aspectRatio: "1",
+                }}
+              />
+            )}
             <Box sx={{ alignItems: "center", margin: "5% auto" }}>
               <Typography
                 fontWeight="fontWeightLight"
@@ -209,7 +198,7 @@ const DiscoContent = (props: {
                 <IconButton
                   className="H2"
                   onClick={() => {
-                    window.open(props.applelink);
+                    window.open(props.applemusic_link);
                   }}
                   sx={{ color: "black", aspectRatio: 1, width: "50px" }}
                 >
@@ -218,7 +207,7 @@ const DiscoContent = (props: {
                 <IconButton
                   className="H2"
                   onClick={() => {
-                    window.open(props.spotifylink);
+                    window.open(props.spotify_link);
                   }}
                   sx={{ color: "black", aspectRatio: 1, width: "50px" }}
                 >
@@ -227,7 +216,7 @@ const DiscoContent = (props: {
                 <IconButton
                   className="H2"
                   onClick={() => {
-                    window.open(props.youtubelink);
+                    window.open(props.youtubemusic_link);
                   }}
                   sx={{ color: "black", aspectRatio: 1, width: "50px" }}
                 >
@@ -236,12 +225,12 @@ const DiscoContent = (props: {
                 <IconButton
                   className="H2"
                   onClick={() => {
-                    window.open(props.linelink);
+                    window.open(props.linemusic_link);
                   }}
                   sx={{ color: "black", aspectRatio: 1, width: "50px" }}
                 >
                   <img
-                    src="LINE_MUSIC_secondary_logo_black.png"
+                    src="/LINE_MUSIC_secondary_logo_black.png"
                     alt=""
                     style={{ height: "22px", margin: "2px -2px 0 -2px" }}
                   />
@@ -249,7 +238,7 @@ const DiscoContent = (props: {
                 <IconButton
                   className="H2"
                   onClick={() => {
-                    window.open(props.amazonlink);
+                    window.open(props.amazonmusic_link);
                   }}
                   sx={{ color: "black", aspectRatio: 1, width: "50px" }}
                 >

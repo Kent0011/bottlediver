@@ -10,8 +10,8 @@ jest.mock('react-intersection-observer', () => ({
 describe('NewsContent', () => {
   const mockProps = {
     title: 'テストニュース',
-    modalTitle: 'テストモーダルタイトル',
-    imgpass: 'test.jpg',
+    content: 'モーダル本文\n2行目',
+    image: 'test.jpg',
   };
 
   beforeEach(() => {
@@ -22,49 +22,33 @@ describe('NewsContent', () => {
   });
 
   test('タイトルが表示される', () => {
-    render(
-      <NewsContent {...mockProps}>
-        <div>テストコンテンツ</div>
-      </NewsContent>
-    );
+    render(<NewsContent {...mockProps} />);
 
     expect(screen.getByText('テストニュース')).toBeInTheDocument();
   });
 
   test('初期状態ではモーダルが閉じている', () => {
-    render(
-      <NewsContent {...mockProps}>
-        <div>テストコンテンツ</div>
-      </NewsContent>
-    );
+    render(<NewsContent {...mockProps} />);
 
-    // モーダルのコンテンツは表示されていない
-    expect(screen.queryByText('テストモーダルタイトル')).not.toBeInTheDocument();
+    // モーダルの本文は表示されていない
+    expect(screen.queryByText(/モーダル本文/)).not.toBeInTheDocument();
   });
 
   test('タイトルをクリックするとモーダルが開く', async () => {
-    render(
-      <NewsContent {...mockProps}>
-        <div>モーダルコンテンツ</div>
-      </NewsContent>
-    );
+    render(<NewsContent {...mockProps} />);
 
     const titleElement = screen.getByText('テストニュース');
     fireEvent.click(titleElement);
 
     await waitFor(() => {
-      expect(screen.getByText('テストモーダルタイトル')).toBeInTheDocument();
+      // モーダル内に title と content が両方表示される
+      expect(screen.getAllByText('テストニュース').length).toBeGreaterThan(1);
+      expect(screen.getByText(/モーダル本文/)).toBeInTheDocument();
     });
-
-    expect(screen.getByText('モーダルコンテンツ')).toBeInTheDocument();
   });
 
   test('モーダル内に画像が表示される', async () => {
-    render(
-      <NewsContent {...mockProps}>
-        <div>テストコンテンツ</div>
-      </NewsContent>
-    );
+    render(<NewsContent {...mockProps} />);
 
     const titleElement = screen.getByText('テストニュース');
     fireEvent.click(titleElement);
@@ -76,20 +60,16 @@ describe('NewsContent', () => {
     });
   });
 
-  test('children が正しくレンダリングされる', async () => {
-    render(
-      <NewsContent {...mockProps}>
-        <div>カスタムコンテンツ</div>
-        <p>追加のテキスト</p>
-      </NewsContent>
-    );
+  test('image が未指定なら画像は表示されない', async () => {
+    render(<NewsContent title="タイトル" content="本文" />);
 
-    const titleElement = screen.getByText('テストニュース');
+    const titleElement = screen.getByText('タイトル');
     fireEvent.click(titleElement);
 
     await waitFor(() => {
-      expect(screen.getByText('カスタムコンテンツ')).toBeInTheDocument();
-      expect(screen.getByText('追加のテキスト')).toBeInTheDocument();
+      expect(screen.getByText('本文')).toBeInTheDocument();
     });
+
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 });
