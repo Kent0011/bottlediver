@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
-import Chip from "@mui/material/Chip";
 import CircularProgress from "@mui/material/CircularProgress";
 import Container from "@mui/material/Container";
 import Divider from "@mui/material/Divider";
@@ -250,8 +249,6 @@ const formValuesToPayload = (
     },
     {} as Record<string, string | string[]>,
   );
-
-const getItemValue = (item: ResourceItem, fieldName: string) => item[fieldName];
 
 const renderItemValue = (field: FieldDefinition, value: unknown) => {
   if (value === undefined || value === null) {
@@ -909,7 +906,7 @@ const Admin = () => {
                               <Divider />
 
                               {activeDefinition.fields.map((field) => {
-                                const value = getItemValue(item, field.name);
+                                const value = item[field.name];
                                 if (
                                   value === undefined ||
                                   value === null ||
