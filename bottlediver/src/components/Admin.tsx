@@ -1,4 +1,4 @@
-import { FormEvent, useCallback, useEffect, useMemo, useState } from "react";
+import { FormEvent, useCallback, useEffect, useState } from "react";
 import Alert from "@mui/material/Alert";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
@@ -300,16 +300,8 @@ const Admin = () => {
   const [apiBaseUrl, setApiBaseUrl] = useState(
     () => process.env.REACT_APP_API_BASE_URL ?? "",
   );
-  const expectedUsername = process.env.REACT_APP_BASIC_USERNAME ?? "";
-  const expectedPassword = process.env.REACT_APP_BASIC_PASSWORD ?? "";
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const matchesExpectedCredentials = useCallback(
-    (candidateUsername: string, candidatePassword: string) =>
-      candidateUsername === expectedUsername &&
-      candidatePassword === expectedPassword,
-    [expectedPassword, expectedUsername],
-  );
   const [isAuthenticated, setIsAuthenticated] = useState(false);
   const [selectedTab, setSelectedTab] = useState(0);
   const [itemsByResource, setItemsByResource] = useState(createEmptyItems);
@@ -326,18 +318,6 @@ const Admin = () => {
   );
 
   const activeDefinition = resourceDefinitions[selectedTab];
-  const hasExpectedCredentials = useMemo(
-    () => expectedUsername !== "" && expectedPassword !== "",
-    [expectedPassword, expectedUsername],
-  );
-  const hasConnectionInfo = useMemo(
-    () =>
-      apiBaseUrl.trim() !== "" &&
-      hasExpectedCredentials &&
-      username.trim() !== "" &&
-      password !== "",
-    [apiBaseUrl, hasExpectedCredentials, password, username],
-  );
 
   const showStatus = (severity: "success" | "error", message: string) => {
     setStatusSeverity(severity);
@@ -461,20 +441,12 @@ const Admin = () => {
   const handleAuthenticate = async (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!hasConnectionInfo) {
-      if (apiBaseUrl.trim() === "") {
-        showStatus("error", "REACT_APP_API_BASE_URL を設定してください。");
-        return;
-      }
+    if (apiBaseUrl.trim() === "") {
+      showStatus("error", "REACT_APP_API_BASE_URL を設定してください。");
+      return;
+    }
 
-      if (!hasExpectedCredentials) {
-        showStatus(
-          "error",
-          "BASIC_USERNAME / BASIC_PASSWORD を設定してください。",
-        );
-        return;
-      }
-
+    if (username.trim() === "" || password === "") {
       showStatus(
         "error",
         "Basic 認証のユーザー名・パスワードを入力してください。",
@@ -485,32 +457,33 @@ const Admin = () => {
     setIsAuthenticating(true);
 
     try {
-      if (!matchesExpectedCredentials(username, password)) {
-        setIsAuthenticated(false);
-        setItemsByResource(createEmptyItems());
-        setForms(createEmptyForms());
-        setEditingIds(createEmptyEditingIds());
-        showStatus("error", "ユーザー名またはパスワードが正しくありません。");
-        return;
-      }
+      const normalizedBaseUrl = normalizeBaseUrl(apiBaseUrl);
+      await request(
+        "/auth",
+        undefined,
+        {
+          baseUrl: normalizedBaseUrl,
+          username,
+          password,
+          requireAuth: true,
+        },
+      );
 
-      setApiBaseUrl(normalizeBaseUrl(apiBaseUrl));
+      setApiBaseUrl(normalizedBaseUrl);
       setIsAuthenticated(true);
-      await loadAllResources(normalizeBaseUrl(apiBaseUrl), {
+      await loadAllResources(normalizedBaseUrl, {
         username,
         password,
       });
-      showStatus(
-        "success",
-        "接続設定を保存しました。保護された操作の認証結果は実行時に確認されます。",
-      );
+      showStatus("success", "認証に成功しました。");
     } catch (error) {
       setIsAuthenticated(false);
+      setItemsByResource(createEmptyItems());
+      setForms(createEmptyForms());
+      setEditingIds(createEmptyEditingIds());
       showStatus(
         "error",
-        error instanceof Error
-          ? error.message
-          : "接続設定の保存に失敗しました。",
+        error instanceof Error ? error.message : "認証に失敗しました。",
       );
     } finally {
       setIsAuthenticating(false);
@@ -699,12 +672,6 @@ const Admin = () => {
 
           {statusMessage && (
             <Alert severity={statusSeverity}>{statusMessage}</Alert>
-          )}
-
-          {!hasExpectedCredentials && (
-            <Alert severity="error">
-              環境変数 `BASIC_USERNAME` と `BASIC_PASSWORD` が未設定です。
-            </Alert>
           )}
 
           {!isAuthenticated ? (
